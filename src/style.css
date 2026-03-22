@@ -1,0 +1,120 @@
+:root {
+    --content-max-width: 800px;
+    --page-margin-top: 40px;
+}
+/* 1. Variable Definitions */
+:root {
+    --olive-leaf: #283618ff;
+    --black-forest: #283618ff;
+    --cornsilk:  #606c38ff;
+    --sunlit-clay: #dda15eff;
+    --copperwood: #bc6c25ff;
+
+    --bg-color: var(--cornsilk);
+    --heading-color: var(--black-forest);
+    --text-color: var(--olive-leaf);
+    --accent-red: var(--sunlit-clay);
+    --link-color: var(--copperwood);
+    --border-color: var(--olive-leaf);
+    --footer-text: var(--olive-leaf);
+    --button-hover: var(--copperwood);
+}
+
+/* 2. Base Styles */
+body {
+    font-family: "Bitstream Charter", serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: 18px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+header {
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.header-title h2 {
+    margin: 0 0 4px 0;
+}
+
+.header-title p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+h1,
+h2 {
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.course-list {
+    list-style-type: square;
+}
+
+.formula-box {
+    background: var(--accent-red);
+    color: #ffffff;
+    padding: 20px;
+    border-left: 5px solid var(--border-color);
+    font-style: italic;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+
+
+main {
+    margin-left: 0;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8em;
+    color: var(--footer-text);
+}
+
+/* 4. Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        margin: 20px auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .header-controls {
+        align-self: flex-end;
+    }
+}
