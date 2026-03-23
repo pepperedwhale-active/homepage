@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2. The Fundamental Group ‣ Chapter 1 Fundamental Group ‣ Topology</title>
+<!--Generated on Tue Mar 24 00:00:43 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on .-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="up" href="Ch1.html" title="Chapter 1 Fundamental Group ‣ Topology">
+<link rel="up up" href="algtop.html" title="Topology">
+<link rel="start" href="algtop.html" title="Topology">
+<link rel="prev" href="Ch1.S1.html" title="1. Homotopy ‣ Chapter 1 Fundamental Group ‣ Topology">
+<link rel="next" href="Ch1.S3.html" title="3. Covering Spaces ‣ Chapter 1 Fundamental Group ‣ Topology">
+<link rel="section" href="Ch1.S1.html" title="1. Homotopy ‣ Chapter 1 Fundamental Group ‣ Topology">
+<link rel="section" href="Ch1.S3.html" title="3. Covering Spaces ‣ Chapter 1 Fundamental Group ‣ Topology">
+<link rel="section" href="Ch1.S4.html" title="4. Consequences of 𝜋₁⁢(𝑆¹)≅ℤ ‣ Chapter 1 Fundamental Group ‣ Topology">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Fundamental Group ‣ Topology">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch1.html" title="In Topology" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Fundamental Group</span></a><a href="Ch1.S1.html" title="In Chapter 1 Fundamental Group ‣ Topology" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Homotopy</span></a><a href="Ch1.S3.html" title="In Chapter 1 Fundamental Group ‣ Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Covering Spaces</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_font_bold ltx_title_section" style="font-size:120%;">2.  The Fundamental Group</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">A path starting and ending at a point is said to be a loop based at that point.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a topological space, and let <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="x_{0}\in X" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>X</mi></mrow></math>. The set of all path homotopy classes of loops based at <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> is a group, denoted <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="\pi_{1}(X,x_{0})" display="inline"><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> and called the first fundamental group (or just the fundamental group) at <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>.</p>
+</div>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> be a path from <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> to <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math> and define a map</span></p>
+<table id="Ch1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.Ex4.m1" class="ltx_Math" alttext="\hat{\alpha}:\pi_{1}(X,x_{0})\rightarrow\pi_{1}(X,x_{1})" display="block"><mrow><mover accent="true"><mi>α</mi><mo>^</mo></mover><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">by</span></p>
+<table id="Ch1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.Ex5.m1" class="ltx_Math" alttext="[f]\mapsto[\alpha]^{-1}\star[f]\star[\alpha]" display="block"><mrow><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">↦</mo><mrow><msup><mrow><mo stretchy="false">[</mo><mi>α</mi><mo rspace="0.055em" stretchy="false">]</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo rspace="0.222em">⋆</mo><mrow><mo stretchy="false">[</mo><mi>f</mi><mo rspace="0.055em" stretchy="false">]</mo></mrow><mo rspace="0.222em">⋆</mo><mrow><mo stretchy="false">[</mo><mi>α</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="[\alpha]^{-1}" display="inline"><msup><mrow><mo stretchy="false">[</mo><mi>α</mi><mo stretchy="false">]</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> is the path homotopy class of the reverse path from <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math> to <math id="Thmtheorem2.p1.m6" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>. The map <math id="Thmtheorem2.p1.m7" class="ltx_Math" alttext="\hat{\alpha}" display="inline"><mover accent="true"><mi>α</mi><mo>^</mo></mover></math> is a group homomorphism. Furthermore, it is an isomorphism.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">exercise.
+∎</p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Note that the maps <math id="p3.m1" class="ltx_Math" alttext="\hat{\alpha}" display="inline"><mover accent="true"><mi>α</mi><mo>^</mo></mover></math> are not canonical isomorphism, as they reqire the choice of a path <math id="p3.m2" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>. Also, when <math id="p3.m3" class="ltx_Math" alttext="x_{0}=x_{1}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></math>, <math id="p3.m4" class="ltx_Math" alttext="\hat{\alpha}" display="inline"><mover accent="true"><mi>α</mi><mo>^</mo></mover></math> is an inner automorphism.</p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 2.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is path connected and <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="x_{0},x_{1}\in X" display="inline"><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>∈</mo><mi>X</mi></mrow></math>, we have that <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="\pi_{1}(X,x_{0})\cong\pi_{1}(X,x_{1})" display="inline"><mrow><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So it makes sense to talk about the fundamental group of a path connected space.</span></p>
+</div>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.4</span></span><span class="ltx_text ltx_font_bold"> </span>(Simply connected)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">A path connected space <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is said to be simply connected if for some <math id="Thmtheorem4.p1.m2" class="ltx_Math" alttext="x_{0}\in X" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>X</mi></mrow></math>, <math id="Thmtheorem4.p1.m3" class="ltx_Math" alttext="\pi_{1}(X,x_{0})=0" display="inline"><mrow><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and hence for every <math id="Thmtheorem4.p1.m4" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.5</span></span><span class="ltx_text ltx_font_bold"> </span>(Pointed Top)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">The category consisting of pairs <math id="Thmtheorem5.p1.m1" class="ltx_Math" alttext="(X,x_{0})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> as objects and continuous maps <math id="Thmtheorem5.p1.m2" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow></math> such that <math id="Thmtheorem5.p1.m3" class="ltx_Math" alttext="f(x_{0})=y_{0}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>y</mi><mn>0</mn></msub></mrow></math> as morphisms between <math id="Thmtheorem5.p1.m4" class="ltx_Math" alttext="(X,x_{0})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> to <math id="Thmtheorem5.p1.m5" class="ltx_Math" alttext="(Y,y_{0})" display="inline"><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> is called the category of pointed topological sapces, denoted <math id="Thmtheorem5.p1.m6" class="ltx_Math" alttext="{\textbf{Top}}_{\star}" display="inline"><msub><mtext class="ltx_mathvariant_bold">Top</mtext><mo>⋆</mo></msub></math>.</p>
+</div>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.6</span></span><span class="ltx_text ltx_font_bold"> </span>(Induced homomorphism)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem6.p1.m1" class="ltx_Math" alttext="\phi:(X,x_{0})\rightarrow(Y,y_{0})" display="inline"><mrow><mi>ϕ</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> be a map of pointed topological spaces. Define the map</p>
+<table id="Ch1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.Ex6.m1" class="ltx_Math" alttext="\phi_{\star}:\pi_{1}(X,x_{0})\rightarrow\pi_{1}(Y,y_{0})" display="block"><mrow><msub><mi>ϕ</mi><mo>⋆</mo></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">by <math id="Thmtheorem6.p1.m2" class="ltx_Math" alttext="[f]\mapsto[\phi\circ f]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">↦</mo><mrow><mo stretchy="false">[</mo><mrow><mi>ϕ</mi><mo lspace="0.222em" rspace="0.222em">∘</mo><mi>f</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></math>. This map is said to be the homomorphism induced by <math id="Thmtheorem6.p1.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>.</p>
+</div>
+</div>
+<div id="Thmexercise1" class="ltx_theorem ltx_theorem_exercise">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Ex 2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmexercise1.p1" class="ltx_para">
+<p class="ltx_p">Show that the induced homomorphism is indeed a group homomorphism</p>
+</div>
+</div>
+<section id="SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_font_bold ltx_title_subsection" style="font-size:120%;">I  Functorial properties of the induced homomorphism</h2>
+
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2.7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem7.p1.m1" class="ltx_Math" alttext="f:(X,x_{0})\rightarrow(Y,y_{0})" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="Thmtheorem7.p1.m2" class="ltx_Math" alttext="g:(Y,y_{0})\rightarrow(Z,z_{0})" display="inline"><mrow><mi>g</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mi>Z</mi><mo>,</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> are maps of pointed topological spaces, then <math id="Thmtheorem7.p1.m3" class="ltx_Math" alttext="(g\circ f)_{\star}=g_{\star}\circ f_{\star}" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo lspace="0.222em" rspace="0.222em">∘</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋆</mo></msub><mo>=</mo><mrow><msub><mi>g</mi><mo>⋆</mo></msub><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>f</mi><mo>⋆</mo></msub></mrow></mrow></math>. Furthermore, if <math id="Thmtheorem7.p1.m4" class="ltx_Math" alttext="i:(X,x_{0})\rightarrow(X,x_{0})" display="inline"><mrow><mi>i</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is the identity map, then <math id="Thmtheorem7.p1.m5" class="ltx_Math" alttext="i_{\star}=\mathrm{id}_{\pi_{1}(X,x_{0})}" display="inline"><mrow><msub><mi>i</mi><mo>⋆</mo></msub><mo>=</mo><msub><mi>id</mi><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></msub></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">exercise
+∎</p>
+</div>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">All of this is to say that taking the fundamental group at a point is a functor <math id="SS1.p2.m1" class="ltx_Math" alttext="{\textbf{Top}}_{\star}\rightarrow{\textbf{Grp}}" display="inline"><mrow><msub><mtext class="ltx_mathvariant_bold">Top</mtext><mo>⋆</mo></msub><mo stretchy="false">→</mo><mtext class="ltx_mathvariant_bold">Grp</mtext></mrow></math>.</p>
+</div>
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 2.8</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem8.p1.m1" class="ltx_Math" alttext="h:(X,x_{0})\rightarrow(Y,y_{0})" display="inline"><mrow><mi>h</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is an isomorphism, then <math id="Thmtheorem8.p1.m2" class="ltx_Math" alttext="h_{\star}:\pi_{1}(X,x_{0})\rightarrow\pi_{1}(Y,y_{0})" display="inline"><mrow><msub><mi>h</mi><mo>⋆</mo></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> is an isomorphism.</span></p>
+</div>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">(The above holds for any functor, but we state it explicitly anyways.)</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch1.S1.html" title="In Chapter 1 Fundamental Group ‣ Topology" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Homotopy</span></a><a href="Ch1.S3.html" title="In Chapter 1 Fundamental Group ‣ Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Covering Spaces</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Mar 24 00:00:43 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
