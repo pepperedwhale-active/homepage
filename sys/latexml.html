@@ -11,6 +11,10 @@
 </head>
 
 <body>
+<nav>
+<a href="../index.html">Home</a> →
+<a href="../sys.html">Computers</a>
+</nav>
     <header>
         <div class="header-title">
             <h2>
@@ -20,9 +24,9 @@
     </header>
     <main>
     <p>Recently, arXiv introduced a new feature to <a href="https://blog.arxiv.org/2023/12/21/accessibility-update-arxiv-now-offers-papers-in-html-format/"> view pdfs in html format </a>. I started wondering how they implemented this, and came across the <a href="https://www.arxiv-vanity.com/">arXiv-vanity</a> project, which is where this technology took birth. The creators explained that they used <a href="https://packages.debian.org/trixie/latexml">LaTeXML </a>, a LaTeX to XML converter. I decided to use this package for my own home page, and you can see the pdf version alongside the HTML version of my notes in <a href="../notes.html">Notes/Posts</a>. In this post, I will show how you can use this tool to convert your own PDFs to HTML as well using LaTeXML.</p>
-    If you dont want to download this package, but want to try it out, go to https://latexml.mathweb.org/editor.
+    Note: If you dont want to download this package, but want to try it out, go to https://latexml.mathweb.org/editor.
     <p>
-    First, install LaTeXML. I am using debian, so i'd write:<br><br>
+    Coming back to the set up, first install LaTeXML. I am using debian, so i'd write:<br><br>
     <tt>sudo apt install latexml</tt>.<br><br>
     As of writing this, LaTeXML is still a very new tool, and as such, it does not implement some latex packages yet. So if you have any packages like that, i'd recommend you remove them. In my case, I was using <a href="https://ctan.org/pkg/newpx">newpx</a> and <a href="https://ctan.org/pkg/newtx">newtx</a> for font styles.<br>
     Now,  if the .tex file you want to convert is called <tt>input.tex</tt>, type <br><br>
