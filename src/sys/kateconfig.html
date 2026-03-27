@@ -21,21 +21,25 @@
     <main>
         As a KDE user, I like using the default text editor that comes with KDE, Kate. Most of what I do is typesetting documents (notes, home work, etc.), and for that I like to have a good LaTeX workflow. What I mean by this is that I want to be able to write LaTeX in one tab on one half of my screen, and have a preview of the PDF updating live on the other half. I also want to be able to do inverse synctex from my pdf to Kate. For this, it is very helpful to know how Kate plugins work and I will be showing how to achieve this workflow in this document. See the end for synctex setup.
         <h2>Running Shell Scripts using Kate </h2>
-        <p>We will be using this functionality to achieve what we want. First, make sure that you have a distribution of LaTeX installed. In my case, i'm using TeXLive.Now, in Kate, go to <tt>Settings -> Configure Kate... -> External Tools</tt> and click on <tt>Run Shell Script</tt> under the <tt>Tools</tt> dropdown. Then click on  <select><option value="Add">Add </option></select> <tt> -> Add Tool</tt> near the bottom left of the Configure Kate window</p>
+        <p>We will be using this functionality to achieve what we want. First, make sure that you have a distribution of LaTeX installed. In my case, i'm using TeXLive.Now, in Kate, go to <br><tt>Settings -> Configure Kate... -> External Tools</tt><br> and click on <tt>Run Shell Script</tt> under the <tt>Tools</tt> dropdown. Then do <rb><select><option value="Add">Add </option></select> <tt> -> Add Tool</tt><br> near the bottom left of the Configure Kate window</p>
 
         <p>At this point you will be greeted with a window having the fields required to make a shell script that will run upon save. We plan to use this by getting Kate to run the command <br>
-
-        <tt>pdflatex &lt current_file.tex &gt</tt> for us, everytime we save.</p> <br>
-        To do so, set any name you want in the <tt> Name </tt> field<br> In <tt>Exectuable</tt>, type <tt>pdflatex </tt>
-        <br> In <tt>Arguments</tt>, type <tt>%{Document:FileName}</tt>
-        <br> (if you want to set up synctex, type <tt>-synctex=1 -interaction=nonstopmode %{Document:FileName}</tt> instead)
-        <br> In <tt> Mime Types </tt>, type <tt> text/x-tex</tt> (This is the mime type for LaTeX documents).
-        <br> In <tt> Save </tt>, select <tt>Current Document</tt>
-        <br> In <tt> Trigger</tt>, select <tt> After Save </tt><br>
+        <tt>pdflatex &lt current_file.tex &gt</tt> for us, everytime we save.</p>
+        To achieve this, do the following:
+        <ul>
+        <li>set any name you want in the <tt> Name </tt> field</li>
+        <li>In <tt>Exectuable</tt>, type <tt>pdflatex </tt></li>
+        <li> In <tt>Arguments</tt>, type <tt>%{Document:FileName}</tt>
+        </li> (if you want to set up synctex, type <tt>-synctex=1 -interaction=nonstopmode %{Document:FileName}</tt> instead)
+        <li> In <tt> Mime Types </tt>, type <tt> text/x-tex</tt> (This is the mime type for LaTeX documents).
+        </li>
+        <li> In <tt> Save </tt>, select <tt>Current Document</tt>
+        </li>
+        <li> In <tt> Trigger</tt>, select <tt> After Save </tt></li>
         Leave everything else as it is, and click <tt> Ok </tt>.
         </p>
-
-        <h2>Setting up synctex (Optional)</h2>
+        </ul>
+        <h3>Setting up synctex (Optional)</h3>
         <p>I will be showing how to set up reverse synctex in your favourite pdf viewer, which in my case is sioyek. First, go to your config file. In the case of sioyek, go to <tt>prefs_user.config</tt> and add the following command: <tt>inverse_search_command kate -l %2 "%1"</tt>. Here "%2,%1" refers to the line and file number respectively.</p>
 
         Congratulations! you have now set up auto recompile on save with Kate. Now, you can use a pdf viewer like Okular or Sioyek on one half of your screen, and edit your document on the other half in Kate, and every time you save the document you are working on, Kate should automatically recompile the document and the changes should be visible in your pdf.
