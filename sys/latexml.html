@@ -19,11 +19,12 @@
             </div>
     </header>
     <main>
-    <p>Recently, arXiv introduced a new feature to <a href="https://blog.arxiv.org/2023/12/21/accessibility-update-arxiv-now-offers-papers-in-html-format/"> view pdfs in html format </a>. I started wondering how they implemented this, and came across the <a href="https://www.arxiv-vanity.com/">arXiv-vanity</a> project, which is where this technology took birth. The creators explained that they used <a href="https://packages.debian.org/trixie/latexml">LaTeXML </a>, a LaTeX to XML converter. I decided to use this library for my own home page, and you can see the pdf version alongside the HTML version of my notes in <a href="../notes.html">Notes/Posts</a>. In this post, I will show how you can use this tool to convert your own PDFs to HTML as well using LaTeXML.</p>
+    <p>Recently, arXiv introduced a new feature to <a href="https://blog.arxiv.org/2023/12/21/accessibility-update-arxiv-now-offers-papers-in-html-format/"> view pdfs in html format </a>. I started wondering how they implemented this, and came across the <a href="https://www.arxiv-vanity.com/">arXiv-vanity</a> project, which is where this technology took birth. The creators explained that they used <a href="https://packages.debian.org/trixie/latexml">LaTeXML </a>, a LaTeX to XML converter. I decided to use this package for my own home page, and you can see the pdf version alongside the HTML version of my notes in <a href="../notes.html">Notes/Posts</a>. In this post, I will show how you can use this tool to convert your own PDFs to HTML as well using LaTeXML.</p>
+    If you dont want to download this package, but want to try it out, go to https://latexml.mathweb.org/editor.
     <p>
     First, install LaTeXML. I am using debian, so i'd write:<br><br>
     <tt>sudo apt install latexml</tt>.<br><br>
-    As of writing this, LaTeXML is still a very new tool, and as such, it does not mingle well with <a href="https://texdoc.org/serve/expl3.pdf/0">expl3</a> (I might be wrong about this, but this is my experience). So if you have any packages that use expl3, i'd recommend you remove them. In my case, I was using <a href="https://ctan.org/pkg/newpx">newpx</a> and <a htef="https://ctan.org/pkg/newtx">newtx</a> for font styles.<br>
+    As of writing this, LaTeXML is still a very new tool, and as such, it does not implement some latex packages yet. So if you have any packages like that, i'd recommend you remove them. In my case, I was using <a href="https://ctan.org/pkg/newpx">newpx</a> and <a href="https://ctan.org/pkg/newtx">newtx</a> for font styles.<br>
     Now,  if the .tex file you want to convert is called <tt>input.tex</tt>, type <br><br>
     <tt>latexml --destination=output.xml input</tt><br><br>
     This will produce an XML file named <tt>output.xml</tt>.<br>
@@ -31,11 +32,12 @@
     <tt>latexmlpost --destination=output.html output.xml</tt><br>
     <br> This will produce the final .html output, converting your .tex file to .html output.
     </p>
-    This was a very simple conversion without many customisations to get you started. In my case, I also used the <tt>--splitat=sectionr</tt> option when calling <tt>latexmlpost</tt> to split my pdf at the <tt>\section </tt> level, as you can see in <a href="../mathstuff/algtop/algtop.html">Algebraic Topology </a>. I also added some custom css styles, so that the output matches the color scheme of the rest of the site. Here is the <a href="https://math.nist.gov/~BMiller/LaTeXML/manual.pdf">documentation</a>, for more details.
+    This was a very simple conversion without many customisations to get you started. In my case, I also used the <tt>--splitat=section</tt> option when calling <tt>latexmlpost</tt> to split my pdf at the <tt>\section </tt> level, as you can see in <a href="../mathstuff/algtop/algtop.html">Algebraic Topology </a>. I also added some custom css styles by using the <tt>--css=filename.css</tt> option, so that the output matches the color scheme of the rest of the site. Here is the <a href="https://math.nist.gov/~BMiller/LaTeXML/manual.pdf">documentation</a>, for more details.<br>
 
     <h2>Why do this? </h2>
     One answer could be that PDFs are just BAD. They are practically unusable on mobile devices(compared to web pages atleast). I say this from personal experience. One keeps wasting time moving around the document, squinting at it, etc. Although there are great PDF viewers for mobile, I still consider Web pages superior.<br><br>
-    Another answer could be that this is exactly what the  <a href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web">World Wide Web</a> was designed for. That is, the WWW was initially created by academics to share their work. Web pages for general public use, as we know them today, began only around 1993, about 5 years after the creation of the WWW. There are also tools like <a href="https://obsidian.md/">Obsidian </a>, but I find them eating up a lot of ram, and I dont like the fact that files are stored as markdown files causing almost no room to apply customisations.
+    Another answer could be that this is exactly what the  <a href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web">World Wide Web</a> was designed for. That is, the WWW was initially created by academics to share their work. Web pages for general public use, as we know them today, began only around 1993, about 5 years after the creation of the WWW.<br><br>
+    There are also tools like <a href="https://obsidian.md/">Obsidian </a>, but I find them eating up a lot of ram, and I dont like the fact that files are stored as markdown files causing almost no room to apply customisations.
     </main>
 </body>
 
