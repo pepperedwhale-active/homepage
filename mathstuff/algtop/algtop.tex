@@ -1,0 +1,331 @@
+\documentclass[10pt, openany]{book}
+\usepackage{amsmath,amssymb,amsthm, thmtools}
+\usepackage{enumitem,tikz-cd}
+\usepackage[pagebackref,colorlinks=true,citecolor=green]{hyperref}
+\usepackage{setspace}
+\usepackage[a4paper, margin=1in]{geometry}
+\setstretch{1.2}
+\renewcommand{\thesubsection}{\Roman{subsection}}
+\renewcommand{\thesection}{\arabic{section}}
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\large\centering\bfseries}
+  {\thesection.}{0.5em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\centering\bfseries}{\thesubsection}{0.5em}{}
+
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\aut}[2]{\mathrm{Aut}_{#1}({#2})}
+\newcommand{\auts}[1]{\mathrm{Aut}({#1})}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Sym}{Sym}
+\newcommand{\catname}[1]{{\normalfont\textbf{#1}}}
+\newcommand{\T}{\catname{T}}
+\DeclareMathOperator{\rank}{rk}
+\DeclareMathOperator{\im}{im}
+\newcommand{\minpol}[1]{\mathrm{m}_{#1}}
+\newcommand{\coker}[1]{{\mathrm{coker}({#1})}}
+\DeclareMathOperator{\ann}{Ann}
+\DeclareMathOperator{\tors}{tors}
+\def\endomorphism#1{\mathrm{End}\left(#1\right)}
+\theoremstyle{plain} 
+\newtheorem{theorem}{Theorem}[section]   
+\newtheorem{lemma}[theorem]{Lemma}       
+\newtheorem{corollary}[theorem]{Corollary} 
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{proposition*}{Proposition}
+
+\theoremstyle{definition} 
+\newtheorem{definition}[theorem]{Definition}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+\newtheorem{exercise}{Ex}[section]
+\newtheorem{example}{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark} 
+\title{Algebraic Topology}
+\author{}
+\date{}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\pagenumbering{arabic}
+\tableofcontents
+\chapter{Fundamental Group}
+\section{Homotopy}
+\begin{definition}[Homotopic maps]
+  Let $f,f': X\rightarrow Y$ be two maps. We say that $f$ is homotopic to $f'$ if there exists a continuous map $F:X\times I\rightarrow Y$ such that:
+  $$\forall x\in X: F(x,0) = f(x) \text{ and } F(x,1) = f'(x)$$ 
+ and the map $f$ is said to be homotopic to $f$, written $f\simeq f'$.
+\end{definition}
+\begin{definition}[Path Homotopy]
+  Two paths $f,g: [0,1]\rightarrow X$ with same start and end points,say $a,b$ respectively are said to be path homotopic if there exists a homotopy $F : I\times I\rightarrow X$ such that $$\forall t\in [0,1]: F(0,t) = a, F(1,t) = b$$ and we write $\simeq_p$ 
+\end{definition}
+\begin{exercise}
+The relations $\simeq$ and $\simeq_p$ are equivalence relations
+\end{exercise}
+\begin{definition}[Product/Concatenation of paths]
+  Let $f,g:[0,1]\rightarrow X$ be paths in $X$, such that $f(1) = g(0)$. We define the product $f\star g$ of the paths to by $$f\star g = \begin{cases}
+    f(2t) & t\leq \frac{1}{2}\\
+    g(2t -1) & \frac{1}{2} \leq t \leq 1\\
+  \end{cases}$$
+\end{definition}
+\begin{exercise}
+  The product operation defines a well defined operation on  path homotopy classes. I.e, if $[f]$ denotes the path homotopy class of $f$, then $[g]\star [h] := [g\star h]$ is a well defined operation on path homotopy classes
+\end{exercise}
+\begin{exercise}
+  Furthermore, find an "identity" path, and show that the product operation satisfies the group axioms
+\end{exercise}
+\section{The Fundamental Group}
+A path starting and ending at a point is said to be a loop based at that point.
+\begin{definition}
+  Let $X$ be a topological space, and let $x_0\in X$. The set of all path homotopy classes of loops based at $x_0$ is a group, denoted $\pi_1(X,x_0)$ and called the first fundamental group (or just the fundamental group) at $x_0$.
+\end{definition}
+\begin{theorem}
+    Let $\alpha$ be a path from $x_0$ to $x_1$ and define a map $$\hat{\alpha}: \pi_1(X, x_0)\rightarrow \pi_1(X,x_1)$$ by $$[f]\mapsto [\alpha]^{-1}\star[f]\star[\alpha]$$ where $[\alpha]^{-1}$ is the path homotopy class of the reverse path from $x_1$ to $x_0$.  The map $\hat{\alpha}$ is a group homomorphism. Furthermore, it is an isomorphism.
+\end{theorem}
+\begin{proof}
+  exercise.
+\end{proof}
+Note that the maps $\hat{\alpha}$ are not canonical isomorphism, as they reqire the choice of a path $\alpha$. Also, when $x_0 = x_1$, $\hat{\alpha}$ is an inner automorphism.
+\begin{corollary}
+  If $X$ is path connected and $x_0,x_1\in X$, we have that $\pi_1(X,x_0)\cong \pi_1(X,x_1)$. So it makes sense to talk about the fundamental group of a path connected space.
+\end{corollary}
+\begin{definition}[Simply connected]
+  A path connected space $X$ is said to be simply connected if for some $x_0\in X$, $\pi_1(X,x_0) = 0$ and hence for every $x\in X$.  
+\end{definition}
+\begin{definition}[Pointed Top]
+  The category consisting of pairs $(X,x_0)$ as objects and continuous maps $f: X\rightarrow Y$ such that $f(x_0) = y_0$ as morphisms between $(X,x_0)$ to $(Y,y_0)$ is called the category of pointed topological sapces, denoted $\catname{Top}_{\star}$.
+\end{definition}
+\begin{definition}[Induced homomorphism]
+Let $\phi: (X,x_0)\rightarrow (Y,y_0)$ be a map of pointed topological spaces. Define the map $$\phi_{\star}:\pi_1(X,x_0)\rightarrow\pi_1(Y,y_0)$$ by $[f]\mapsto [\phi\circ f]$. This map is said to be the homomorphism induced by $\phi$.
+\end{definition}
+\begin{exercise}
+  Show that the induced homomorphism is indeed a group homomorphism
+\end{exercise}
+\subsection{Functorial properties of the induced homomorphism}
+\begin{theorem}
+  If $f: (X,x_0)\rightarrow (Y,y_0)$ and $g: (Y,y_0)\rightarrow (Z,z_0)$ are maps of pointed topological spaces, then $(g\circ f)_{\star} = g_{\star}\circ f_{\star}$. Furthermore, if $i: (X,x_0)\rightarrow (X,x_0)$ is the identity map, then $i_{\star} = \mathrm{id}_{\pi_1(X,x_0)}$.
+\end{theorem}
+\begin{proof}
+  exercise
+\end{proof}
+All of this is to say that taking the fundamental group at a point is a functor $\catname{Top}_{\star}\rightarrow \catname{Grp}$.
+\begin{corollary}
+  If $h: (X,x_0)\rightarrow (Y,y_0)$ is an isomorphism, then $h_{\star}: \pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)$ is an isomorphism.
+\end{corollary}
+(The above holds for any functor, but we state it explicitly anyways.)
+
+\section{Covering Spaces}
+\begin{definition}
+  Let $p : E\rightarrow B$ be a surjective map of topological spaces. The open set $U$ of $B$ is said to be \textbf{evenly covered} by $B$ if $p^{-1}(U)$ can be written as the disjoint union of open sets $V_{\alpha}$ such that the restriction of $p$ to $V_{\alpha}$ is a homeomorphism onto $U$. The collection $\{V_{\alpha}\}$ will be called a partition of $p^{-1}(U)$ into \textbf{slices}
+\end{definition}
+\begin{definition}[Covering space]
+  Let $p:E\rightarrow B$ be a surjective map of topological sapces. If for every $b\in B$, there is an open $U\supset \{b\}$ such that $U$ is evenly covered by $p$, then $E$ is said to be a covering space for $B$ and $p$ is said to be a \textbf{covering map }.
+\end{definition}
+That is to say, if $B$ is locally evenly covered by $p$, then $E$ is a covering space for $B$.
+\begin{exercise}
+  Show that the above definition of covering space is equivalent to the definition of covering space derived from the following definition for evenly covered set:
+  \begin{definition}[Covering Space, alternate definition]
+    $p:E\rightarrow B$ surjective map of topological spaces, $U\subseteq B$ is said to be evenly covered if there exists a set $A$ with the discrete topology such that there exists a homeomorphism $\varphi: U\times A\rightarrow p^{-1}(U)$ making the following diagram commutative:
+    \[\begin{tikzcd}
+	{U\times A} && {p^{-1}(U)} \\
+	& U
+	\arrow["\simeq"', from=1-1, to=1-3]
+	\arrow["\varphi"{description}, shift left=3, draw=none, from=1-1, to=1-3]
+	\arrow["{\pi_1}"', from=1-1, to=2-2]
+	\arrow["p", from=1-3, to=2-2]
+\end{tikzcd}\]
+  \end{definition}
+\end{exercise}
+\begin{example}\label{example:S1R}
+  The real line with the map $x \mapsto (\cos(x), \sin(x))$ is a covering map $\bb R\rightarrow S^1$, and $\bb R$ is thus a covering space for $S^1$.
+\end{example}
+A space is always a covering space of itself, with covering map identity. However, in the case of Example \ref{example:S1R}, there are more maps than just the identity. Namely those given by $(\cos(x), \sin(x))\mapsto (\cos(nx), \sin(nx))$, one for each integer $n$. Now, visually speaking, the fundamental group of $S^1$ seems to be what? Does this hint to some sort of \href{https://en.wikipedia.org/wiki/Fundamental_theorem_of_Galois_theory}{Galois Correspondence} for convering maps and subgroups of the fundamental group given sufficiently "good" conditions?
+
+\begin{exercise}
+  Show that covering maps are open maps.
+\end{exercise}
+\begin{exercise}
+  Let $p: E\rightarrow B$ be a covering map, and let $B_0\subseteq B$ be a subspace. Show that $p|_{p^{-1}(B_0)}:p^{-1}(B_0)\rightarrow B_0$ is a covering map.
+\end{exercise}
+\begin{exercise}
+  product of covering maps is a covering map
+\end{exercise}
+\begin{exercise}
+  Define a figure 8 to be two non degenerate circles meeting at a single common point. Show that the 'infinite grid' $\bb R\times \bb Z\cup \bb Z\times \bb R$ is a covering space of the figure 8. (Hint: You should be able to show this without needing to explicitly write down the map $p$ by using the previous exercise(s). You can also write down the map explicitly if you want, simply use the maps in Example \ref{example:S1R})
+\end{exercise}
+
+How do coverings relate to the fundamental group? we make this connection using lifting.
+\begin{definition}
+  Let $p:E\rightarrow B$ be a covering map. A lift of $f: X\rightarrow B$ along $p$ is a map $\tilde{f}$ such that $p\circ \tilde{f} = f$.
+\end{definition}
+\subsection{Lifting Properties of Covering Spaces}
+\begin{theorem}
+  Let $p: E\rightarrow B$ be a covering map, and let $f: [0,1]\rightarrow B$ be a path with $f(0) = b$. If $e\in p^{-1}(b)$, then there is a unique lift $\tilde{f}:[0,1]\rightarrow E$ with $\tilde{f}(0) = e$.
+\end{theorem}
+\begin{proof}
+  Since $p$ is a covering map, there exists an open cover $\{U_{\alpha}\}_{\alpha\in J}$ of $B$ such that each $U_{\alpha}$ is evenly covered by $p$. Now, note that $\{f^{-1}(U_{\alpha})\}_{\alpha\in J}$ is an open cover of $[0,1]$, and by the lebesgue number lemma, there is a $\delta > 0$ with the property that for any $x\in [0,1]$, we have $(x, x+\delta) \subseteq f^{-1}(U_\alpha)$ for some $\alpha\in J$. Hence we can find a finite subdivision $0=s_0 < s_1 < \cdots < s_n = 1$ such that $f([s_i, s_{i+1}])\subseteq U_{\alpha}$ for some $\alpha\in J$.\\
+
+  Define $\tilde{f}(0) = e$, and assume that $\tilde{f}$ has been continuously defined on $[0,s_i]$ for some $i\geq 0$. We extend $\tilde{f}$ continuously to $[0,s_{i+1}]$. In order to do so, note that $f([s_i,s_{i+1}])\subseteq U_{\alpha}$ for some $\alpha\in J$, and $p^{-1}(U_{\alpha}) = \bigsqcup_{j\in I}V_j\cdots (1)$ for some open $V_j$ with $p|_{V_j}: V_j\rightarrow U_\alpha$ a homeomorphism for each $j\in I$. Pick the unique $j$ with $\tilde{f}(s_i)\in V_j$. Then using (1) we have that $\tilde{f}(s) = p|_{V_j}^{-1}(f(s))$ is a continuous extension to $[0,s_{i+1}]$ by the pasting lemma.
+\end{proof}
+The above theorem shows that paths lift uniquely to other paths in the covering space given the starting point of the lifted path.
+\begin{exercise}
+  Let $p : E\rightarrow B$ be a covering map and let $F: [0,1]\times [0,1]\rightarrow B$ be a continuous map with $F((0,0)) = b$, and let $e\in F^{-1}(b)$. Show that there exists a unique "lift" $\tilde{F}:[0,1]\times [0,1]\rightarrow E$ with $\tilde{F}((0,0)) = e$. (Hint: just repeat the previous proof, making necessary changes along the way.)
+\end{exercise}
+\begin{exercise}
+  Use the previous exercise to show that homotopies (resp. path homotopies) "lift" to  homotopies (resp. path homotopies) uniquely
+\end{exercise}
+\begin{remark}
+  Note that loops need not lift to loops (this should be clear by visualising the map in Example \ref{example:S1R})
+\end{remark}
+But, all hope is not lost. Given a loop and starting point for the lift, the ending point is uniquely determined. So, given $b_0\in B$ and a point $e_0\in p^{-1}(b_0)$ we have a map $$\phi: \pi_{1}(B,b_0)\rightarrow p^{-1}(b_0)$$ given by $\phi([f])\mapsto \tilde{f}(1)$ where $\tilde{f}$ is the unique lift of $f$ along $p$ with $\tilde{f}(0) = e_0$. Note that this map is not canonical, since it depends on the choice of $e_0$. Furthermore, we need to show that this map is well defined.
+\begin{exercise}
+  Show that the lifting correspondence is well defined.
+\end{exercise}
+\begin{definition}
+  the map $\phi: \pi_{1}(B,b_0)\rightarrow p^{-1}(b_0)$ is called the lifting correspondence. (I like to say lifting correspondence w.r.t $e_0$)
+\end{definition}
+
+\begin{theorem}
+  Let $p: E\rightarrow B$ be a covering map, and let $b_0\in B$. Let $e_0\in p^{-1}(b_0)$. If $E$ is path connected, then the lifting correspondence $$\phi: \pi_1(B,b_0)\rightarrow p^{-1}(b_0)$$ w.r.t $e_0$ is surjective. If $E$ is simply connected, it is bijective.
+\end{theorem}
+\begin{proof}
+  exercise.
+\end{proof}
+\begin{theorem}
+  We have the isomorphism $$\pi_1(S^1) \cong \bb Z$$
+\end{theorem}
+\begin{proof}
+  The map $t\mapsto (\cos(2\pi t),\sin(2\pi t))$ is a covering map, and we take the lifting correspondence $\phi: \pi_1(S^1)\cong \pi_1(S^1, (0,1))\rightarrow p^{-1}((0,1)) = \bb Z$ w.r.t $0$. This map is certainly bijective, since $\bb R$ is simply connected. We need to show that this map is a homomorphism. To that end, let $\phi([f]) = m, \phi([g]) = n$. Note that if $\tilde{f}, \tilde{g}$ are the unique lifts of $f,g$ along $p$, then  $\tilde{f}\star (m + \tilde{g})$  goes from $0$ to $m+n$, and a simple computation shows that it is a lifting of $f\star g$ along $p$. Thus $\phi([f]\star[g]) = m + n = \phi([f]) + \phi([g])$.
+\end{proof}
+
+\section{Consequences of $\pi_1(S^1)\cong \bb Z$}
+
+\begin{definition}
+  Let $X$ be a topological space. For $A\subseteq X$, a retraction $r: X\rightarrow A$ is a map of topological spaces such that $r\circ i_A = id_A$ where $i_A : A\hookrightarrow X$ is the inclusion. If for a subspace $A$ there exists such an $r$, we say that $A$ is a retract of $X$.
+\end{definition}
+\begin{exercise}
+  If $A$ is a retract of $X$, and $a_0\in A$ then the induced map $(i_A)_{\star} : \pi_1(A,a_0)\rightarrow \pi_1(X,a_0)$ is an injection. (What does it say about $r_\star$?)
+\end{exercise}
+
+\begin{lemma}
+  $S^1$ is not a retract of $B^2$. Here $B^2 = \{(x,y) : x^2 + y^2 \leq 1\}$
+\end{lemma}
+\begin{proof}
+  Indeed, this is because there is no injection $ \pi_1(S^1) = \bb Z\rightarrow \pi_1(B^2) = \{0\}$ 
+\end{proof}
+\begin{theorem}[Brouwer's fixed point theorem for 2 dimensions]
+  Let $f: B^2\rightarrow B^2$ be a continuous mapping. Then $f$ has a fixed point.
+\end{theorem}
+\begin{proof}
+  We assume that there is a map $f: B^2\rightarrow B^2$ with no fixed points for contradcition. Thus, $\forall x\in B^2:  x\neq f(x)$, so we can pick $t_x > 0$ such that $|x + (f(x) - x)t_x| = 1$. Now define $$h(x) = f(x) + t_x(x - f(x))$$ and note that $t_x$ varies continuously with $x$, because it can be solved for using the quadratic formula. Thus $h$ is continuous, and we also have that $h(x) = x$ for all $x\in S^1$. Thus we have a retraction $h: B^2\rightarrow S^1$, a contradcition.
+\end{proof}
+\begin{exercise}
+  prove the one dimensional version of the above theorem.
+\end{exercise}
+
+\subsection{Quotient Spaces }
+
+\begin{definition}
+  Let $f:X\rightarrow Y$ be a surjective function, where $X$ is a topological space. The quotient topology on $Y$ induced by $X,f$ is the collection of subsets $V\subseteq Y$ such that $f^{-1}(V)$ is open in $X$.
+\end{definition}
+\begin{exercise}
+    verify that this is indeed a topology.
+\end{exercise}
+\begin{definition}
+    a surjective function $f: X\rightarrow Y$ is said to be a quotient map if $Y$ has the quotient topology from $X,f$.
+\end{definition}
+\begin{remark}
+    note that a quotient map is continuous.
+\end{remark}
+
+\begin{lemma}
+    Let $f:X\rightarrow Y$ be a function. Then the quotient topology on $Y$ induced by $X,f$ is the finest topology with respect to which $f$ is continuous.
+\end{lemma}
+\begin{proof}
+    exercise.
+\end{proof}
+\begin{remark}
+    A surjective function $f:X\rightarrow Y$ is a quotient map iff the following condition holds:\newline
+    A subset $K$ is closed in $Y$ iff $f^{-1}(K)$ is closed in $X$
+\end{remark}
+
+\begin{lemma}
+    if $f:X\rightarrow Y$ is a surjective open or closed map, then $f$ is a quotient map.
+\end{lemma}
+
+\begin{theorem}
+    Let $f:X\rightarrow Y$ be a quotient map. Let $B\subseteq Y$ and $A=f^{-1}(B)\subseteq X$ be subspaces and let $g : A\rightarrow B$ be the restricted map.
+    \begin{enumerate}
+    \item If $A$ is open or closed, then $g$ is a quotient map
+    \item If $f$ is an open or closed map, then $g$ is a quotient map.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+    exercise
+\end{proof}
+
+Perhaps the most important property of quotient maps is the following:
+\begin{theorem}
+    Let $f:X\rightarrow Y$ be a quotient map, and let $Z$ be a top. sp. Let $h : X\rightarrow Z$ be a function such that $h(x) = h(x')$ whenever $f(x) = f(x')$. Then $h$ induces a unique function $g: Y\rightarrow Z$ such that $h = g\circ f$. The function $g$ is continuous iff $h$ is continuous. The function $g$ is a quotient map iff $h$ is a quotient map.
+\end{theorem}
+These are not hard to prove, but they are results to keep in mind.
+
+\begin{corollary}
+    Let $h : X\rightarrow Z$ be a continuous surjective map. Let $\sim$ be the equivalence relation $x\sim y$ iff $h(x) = h(y)$, and let $X/\sim$. Give $X/\sim$ the quotient topology from the canonical surjection $\pi: X \rightarrow X/\sim$.
+    \begin{enumerate}
+    \item the map $h$ induces a continuous bijective map $g : X/\sim \rightarrow Z$
+    \item the above map is a homeomorphism iff $h$ is a quotient map.
+    \item If $Z$ is hausdorff, so is $X/\sim$.
+\end{enumerate}
+\end{corollary}
+
+
+\section{Van - Kampen Theorem}
+Let $X$ be a topological space, and $U,V$ open subsets of $X$ with the property that $X = U\cup V$, and $U\cap V\neq\emptyset$.
+The four inclusion maps:
+[insert figure]
+induce fundamental group homomorphisms
+[insert figure]
+By the universal property of the free product, there exists a homomorphism $\Phi: \pi_{1}(U,p)\star\pi_{1}(X,p)$ such that the following diagram commutes
+[insert figure]
+
+\begin{theorem}
+
+Let $X$ be a top. sp. Suppose that $U,V\subseteq X$ are open with $X = U\cup V$, $U$ and $V$ path connected. Let $p\in U\cap V$, and define $C\subseteq \pi_{1}(U,p)\star \pi_{1}(V,p)$ by $$C = \{(i_{\star}\gamma)(j_{\star}\gamma) : \gamma\in\pi_{1}(U\cap V, p)\}$$
+Then the map $\Phi$ is surjective, its kernel is the normal closure of $C$ in $\pi_1(U,p)\star\pi_1(V,p)$. Therefore, $\pi_{1}(X,p)\cong (\pi_1(U,p)\star\pi_1(V,p))/\overline{C}$
+\end{theorem}
+
+\begin{definition}
+    Let $f, h$ be group homomorphisms $H\rightarrow G_1$, $H\rightarrow G_2$ respectively. The amalgamated free product of $G_1, G_2$ along $H$ is denoted by $G_1\star_{H}G_2$, is the quotient group $(G_1\star G_2)/\overline{C}$ where $C$ is the set $\{f(g)h^{-1}(g) : g\in H\}$, thought of as a subset of $G_1\star G_2$ by means of the usual inclusions of $G_1,G_2$ into the free product.
+\end{definition}
+
+therefore, the van kampen theorem states that $\pi_1(X,p)\cong \pi_1(U,p)\star_{\pi_1(U\cap V, p)}\pi_1(V,p)$. I wont be providing proofs, since they will just be copy pastes of \cite{Lee12} .
+\begin{example}
+    The wedge sum $X_1\vee\cdots\vee X_n$ of topological spaces is defined as the quotient of $\bigsqcup_{j}X_j$ by the equivalence relation generated by $p_1\tilde\cdots\tilde p_n$. . Let $\star$ be the point in  $X_1\vee\cdots\vee X_n$ that is the equivalence class of the points $p_i$.
+    \begin{definition}
+    a point $p\in X$ is said to be a nondegenerate base point if there exists a neighbourhood $W$ of $p$ that admits a strong deformation retract onto $p$.
+\end{definition}
+Note for example, that every point in a manifold is a nondegenerate base point.
+    \begin{lemma}
+    Suppose that $p_i\in X_i$ are nondegenerate base points for every $i$. Then $\star$ is a nondegenerate base point in $X_1\vee\cdots\vee X_n$.
+\end{lemma}
+\begin{proof}
+    Indeed, if $W_i$ are neighbourhoods admitting strong deformation retracts $H_i$, then defining $H : \left(\bigsqcup_i W_i\right)\times I\rightarrow \bigsqcup_i W_i$ induces the desired strong deformation retract.
+\end{proof}
+\begin{theorem}
+    If $X_1,\cdots ,X_n$ are spaces with nondegenerate base points $p_i$. The map $$\Phi: \bigstar_i\pi_1(X_i,p_i)\rightarrow \pi_1(X_1\vee\cdots X_n)$$ induced by the inclusion $i_j : X_j\hookrightarrow X_1\vee\cdots\vee X_n$ is an isomorphism.
+\end{theorem}
+\begin{proof}
+    We prove this for the case of two spaces. We want to be able to take $U = X_1, V=X_2$, but the problem is that these are not open. So, if $W_i$ are neighbourhood of $p_i$ admitting strong deformation retracts onto $p_i$, we consider $U_1 = q(X_1\sqcup W_2), U_2 = q(X_2\sqcup W_1)$ where $q$ is the canonical map $X_1\sqcup X_2\rightarrow X_1\vee X_2$. Further, the inclusions $$\{\star\}\hookrightarrow U_1\cap U_2\\ X_1\hookrightarrow U_1, \\ X_2\hookrightarrow U_2$$ are homotopy equivalences. Furthermore, $U_1\cap U_2$ is contractible hence simply connected, so that $$\pi_1(U_1,\star)\star\pi_1(U_2,\star)\rightarrow \pi_!(X_1\vee X_2,\star)$$ is an isomorphism by the Van Kampen Theorem. But since $i_1,i_2$ were homotopy equivalences, we have isomorphisms $\pi_1(X_i,p_i)\rightarrow \pi_1(U_i,\star)$. By induction, we are done.
+\end{proof}
+    \end{example}
+\bibliographystyle{alpha}
+\bibliography{refs.bib}
+\end{document}
