@@ -22,19 +22,19 @@
          </div>
     </header>
     <main>
-	A few days ago, I decided to reallocate some  amount of space on the Windows partition on my laptop to my Debian parition, and in order to do that, I had to merge the boot partitions of both the OSes. This is because I foolishly used the automatic disk partitioning feature during the Debain install. Initially my disk looked like this:<br><br>
+	A few days ago, I decided to reallocate some  amount of space on the Windows partition on my laptop to my Debian parition, and in order to do that, I had to merge the boot partitions of both the OSes. This is because I foolishly used the automatic disk partitioning feature during the Debain install. Before running the Debian installer, my disk looked like this:<br><br>
 ..[boot partition for windows][windows][free space for Debian]...
 <br><br>
 The Debian installer partitioned the free space for Debian as follows:
 <br><br>
-..[boot for windows][windows][boot for debian][debian][swap]..
+..[boot for windows][windows][boot for Debian][Debian][swap]..
 <br><br>
 So after some time, when I had free space in my Windows partition which I wanted to allocate to the Debian partition, the memory looked like this on the disk:<br><br>
-..[boot for windows][windows][space to be allocated to Debian][boot for debian][debian][swap]...<br><br> 
+..[boot for windows][windows][space to be allocated to Debian][boot for Debian][Debian][swap]...<br><br> 
 And this clearly causes an issue in the case that one wishes to allocate disk space from the main parititons of either OS to the other because they are not contiguous. In order to solve this I had to do the following:
 <ul>
 <li>Merge the boot directories of Debian and Windows</li>
-<li> Delete the Debian boot partition created by the debian installer </li>
+<li> Delete the Debian boot partition created by the Debian installer </li>
 <li> Merge the unallocated space with the main partition for Debian </li>
 </ul> 
 
@@ -42,7 +42,7 @@ The hard part about this is the first one (for me atleast), since the rest can e
 <p>
 So, in order to get started with merging the boot partitions, I had to do the following:
 <ul>
-	<li>first, mount the boot directories of windows and debian using <tt>sudo mount /dev/nvme0n1p1 /boot/efi</tt> (substitute nvme0n1p1 with your boot directory for windows). We will be installing GRUB for debian here.  </li>
+	<li>first, mount the boot directories of Windows and Debian using <tt>sudo mount /dev/nvme0n1p1 /boot/efi</tt> (substitute nvme0n1p1 with your boot directory for Windows). We will be installing GRUB for Debian here.  </li>
 	<li>now install grub: <tt>sudo grub-install --trarget=x86_64-efi --efi-directory=/boot/efi --bootloader-id=debian</tt> you should see <tt>debian</tt> after running <tt>ls /boot/efi/EFI</tt>. </li>
 <li>Now you need to make sure that GRUB is first on the boot order. Run <tt>efibootmgr -v</tt> and make sure <tt>Boot0001</tt> is GRUB. In my case it was not, so I had to unmount everything from /boot/efi and remount, first remounting nvme0n1p1(the current windows and future shared boot partition)</li>
 <li>Then I changed my fstab. Initially running <tt>cat /etc/fstab</tt> I saw that the UUID for <tt>/boot/etc</tt> was the one for nvme0n1p5, so I had to change it to the UUID for nvme0n1p1 using <tt>blkid /dev/nvme0n1p1</tt> to get the desired UUID and i made the change. Then run <tt>sudo umount /boot/efi, sudo mount /boot/efi</tt>, and <tt>sudo systemctl daemon-reload</tt> to make sure that <tt>systemd</tt> uses the updated <tt>fstab</tt>. </li>
@@ -51,7 +51,7 @@ So, in order to get started with merging the boot partitions, I had to do the fo
 Finally I rebooted, made sure that my fstab was corrent and <tt>efibootmgr -v</tt> showed the correct boot order
 </p>
 
-Finally, I shut down, booted into a GParted live USB, deleted the obstructing debian installed bootloader, merged the free space, and booted back into debian.
+Finally, I shut down, booted into a GParted live USB, deleted the obstructing Debian installed bootloader, merged the free space, and booted back into Debian.
 
 
     </main>
