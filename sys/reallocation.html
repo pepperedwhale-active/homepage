@@ -23,7 +23,7 @@
     </header>
     <main>
 	A few days ago, I decided to reallocate some  amount of space on the Windows partition on my laptop to my Debian parition, and in order to do that, I had to merge the boot partitions of both the OSes. This is because I foolishly used the automatic disk partitioning feature during the Debain install. Initially my disk looked like this:<br><br>
-..[boot partition for windows][windows]...(other partitions)
+..[boot partition for windows][windows][free space for Debian]...
 <br><br>
 The Debian installer partitioned the free space for Debian as follows:
 <br><br>
@@ -35,7 +35,7 @@ And this clearly causes an issue in the case that one wishes to allocate disk sp
 <ul>
 <li>Merge the boot directories of Debian and Windows</li>
 <li> Delete the Debian boot partition created by the debian installer </li>
-<li> Merge the unallocated space with  debian's main partition.</li>
+<li> Merge the unallocated space with the main partition for Debian </li>
 </ul> 
 
 The hard part about this is the first one (for me atleast), since the rest can easily be done with something like GParted.<br>
