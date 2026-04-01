@@ -87,7 +87,11 @@ a:hover {
     border-radius: 0 4px 4px 0;
 }
 
-
+tt{
+    background: #47602adb;
+    border-radius:4px;
+    padding:3px;
+}
 
 main {
     margin-left: 0;
