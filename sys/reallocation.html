@@ -42,18 +42,16 @@ The hard part about this is the first one (for me atleast), since the rest can e
 <p>
 So, in order to get started with merging the boot partitions, I had to do the following:
 <ul>
-	<li>first, mount the boot directories of Windows and Debian using <tt>sudo mount /dev/nvme0n1p1 /boot/efi</tt> (substitute nvme0n1p1 with your boot directory for Windows). We will be installing GRUB for Debian here.  </li>
-	<li>now install grub: <tt>sudo grub-install --trarget=x86_64-efi --efi-directory=/boot/efi --bootloader-id=debian</tt> you should see <tt>debian</tt> after running <tt>ls /boot/efi/EFI</tt>. </li>
-<li>Now you need to make sure that GRUB is first on the boot order. Run <tt>efibootmgr -v</tt> and make sure <tt>Boot0001</tt> is GRUB. In my case it was not, so I had to unmount everything from /boot/efi and remount, first remounting nvme0n1p1(the current windows and future shared boot partition)</li>
-<li>Then I changed my fstab. Initially running <tt>cat /etc/fstab</tt> I saw that the UUID for <tt>/boot/etc</tt> was the one for nvme0n1p5, so I had to change it to the UUID for nvme0n1p1 using <tt>blkid /dev/nvme0n1p1</tt> to get the desired UUID and i made the change. Then run <tt>sudo umount /boot/efi, sudo mount /boot/efi</tt>, and <tt>sudo systemctl daemon-reload</tt> to make sure that <tt>systemd</tt> uses the updated <tt>fstab</tt>. </li>
+	<li>first, I mounted the boot directories of Windows using <tt>sudo mount /dev/nvme0n1p1 /boot/efi</tt> (substitute nvme0n1p1 with your boot directory for Windows). We will be installing GRUB for Debian here.  </li>
+	<li>now installing grub: <tt>sudo grub-install --trarget=x86_64-efi --efi-directory=/boot/efi --bootloader-id=debian</tt>. Making sure that I see <tt>debian</tt> after running <tt>ls /boot/efi/EFI</tt>. </li>
+<li>Now you need to make sure that GRUB is first on the boot order. Running <tt>efibootmgr -v</tt> and making sure <tt>Boot0001</tt> is GRUB. In my case it was not, so I had to unmount everything from /boot/efi and remount, first remounting nvme0n1p1(the current windows and future shared boot partition)</li>
+<li>Then I changed my fstab. Initially running <tt>cat /etc/fstab</tt> I saw that the UUID for <tt>/boot/etc</tt> was the one for nvme0n1p5, so I had to change it to the UUID for nvme0n1p1 using <tt>blkid /dev/nvme0n1p1</tt> to get the desired UUID and I made the change. Then running <tt>sudo umount /boot/efi, sudo mount /boot/efi</tt>, and <tt>sudo systemctl daemon-reload</tt> to make sure that <tt>systemd</tt> uses the updated <tt>fstab</tt>. </li>
 </ul> 
 
-Finally I rebooted, made sure that my fstab was corrent and <tt>efibootmgr -v</tt> showed the correct boot order
+Then I rebooted, made sure that my fstab was corrent and <tt>efibootmgr -v</tt> showed the correct boot order
 </p>
 
-Finally, I shut down, booted into a GParted live USB, deleted the obstructing Debian installed bootloader, merged the free space, and booted back into Debian.
-
-
+Finally, I shut down, booted into a GParted live USB, deleted the obstructing Debian installed bootloader, merged the free space, and booted back into Debian with some free space to my name.
     </main>
 </body>
 
