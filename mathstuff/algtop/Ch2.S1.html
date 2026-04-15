@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1. The Singular Homology Group ‣ Chapter 2 Singular Homology ‣ Algebraic Topology</title>
+<!--Generated on Thu Apr 16 00:16:35 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on .-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="up" href="Ch2.html" title="Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="up up" href="algtop.html" title="Algebraic Topology">
+<link rel="start" href="algtop.html" title="Algebraic Topology">
+<link rel="prev" href="Ch2.html" title="Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="next" href="Ch2.S2.html" title="2. A Brief Detour Into Homological Alegbra ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S2.html" title="2. A Brief Detour Into Homological Alegbra ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S3.html" title="3. Some Elementary Computations ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S4.html" title="4. Homotopy Invariance ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S5.html" title="5. Mayer-Vietoris Theorem ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S6.html" title="6. Homology Groups of Spheres ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Fundamental Group ‣ Algebraic Topology">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="bibliography" href="bib.html" title="Bibliography ‣ Algebraic Topology">
+<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch2.html" title="In Algebraic Topology" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Singular Homology</span></a><a href="Ch2.html" title="In Algebraic Topology" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Singular Homology</span></a><a href="Ch2.S2.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>A Brief Detour Into Homological Alegbra</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_font_bold ltx_title_section" style="font-size:120%;">1.  The Singular Homology Group</h1>
+
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">A <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="p" display="inline"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> simplex <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="\Delta_{p}\subseteq\mathbb{R}^{p}" display="inline"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mi>p</mi></msub><mo>⊆</mo><msup><mi>ℝ</mi><mi>p</mi></msup></mrow><annotation encoding="application/x-tex">\Delta_{p}\subseteq\mathbb{R}^{p}</annotation></semantics></math> is defined to be equal to the convex set spanned by <math id="Thmtheorem1.p1.m3" class="ltx_math_unparsed" alttext="\{e_{i}|i=1,2,..,p\}\cup\{0\}" display="inline"><semantics><mrow><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mi>i</mi></msub><mo fence="false" rspace="0.167em" stretchy="false">|</mo><mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mo lspace="0em" rspace="0.0835em">.</mo><mo lspace="0.0835em" rspace="0.167em">.</mo><mo>,</mo><mi>p</mi><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">\{e_{i}|i=1,2,..,p\}\cup\{0\}</annotation></semantics></math>.</p>
+</div>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="X" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> be a topological space. A singular <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="p" display="inline"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> simplex on <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="X" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> is an continuous map <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="X\rightarrow\Delta_{p}" display="inline"><semantics><mrow><mi>X</mi><mo stretchy="false">→</mo><msub><mi mathvariant="normal">Δ</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">X\rightarrow\Delta_{p}</annotation></semantics></math>. The free abelian group generated by all singular <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="p" display="inline"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> simplices on <math id="Thmtheorem2.p1.m6" class="ltx_Math" alttext="X" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> is called the <math id="Thmtheorem2.p1.m7" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>th singular chain group on <math id="Thmtheorem2.p1.m8" class="ltx_Math" alttext="X" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>, written <math id="Thmtheorem2.p1.m9" class="ltx_Math" alttext="C_{p}(X)" display="inline"><semantics><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">C_{p}(X)</annotation></semantics></math>, and the elements of this group are called chains.</p>
+</div>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">We define the <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="i-" display="inline"><semantics><mrow><mi>i</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">i-</annotation></semantics></math>th face of the singular <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="p" display="inline"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-simplex <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="F_{i,p}:\Delta_{p-1}\rightarrow\Delta_{p}" display="inline"><semantics><mrow><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">→</mo><msub><mi mathvariant="normal">Δ</mi><mi>p</mi></msub></mrow></mrow><annotation encoding="application/x-tex">F_{i,p}:\Delta_{p-1}\rightarrow\Delta_{p}</annotation></semantics></math> as follows:</p>
+<table id="Ch2.S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex1.m1" class="ltx_Math" alttext="\displaystyle e_{0}" display="inline"><semantics><msub><mi>e</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\displaystyle e_{0}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex1.m2" class="ltx_Math" alttext="\displaystyle\mapsto e_{0}" display="inline"><semantics><mrow><mi></mi><mo stretchy="false">↦</mo><msub><mi>e</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\displaystyle\mapsto e_{0}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex2.m1" class="ltx_Math" alttext="\displaystyle e_{1}" display="inline"><semantics><msub><mi>e</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\displaystyle e_{1}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex2.m2" class="ltx_Math" alttext="\displaystyle\mapsto e_{1}" display="inline"><semantics><mrow><mi></mi><mo stretchy="false">↦</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\displaystyle\mapsto e_{1}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex3.m1" class="ltx_Math" alttext="\displaystyle e_{2}" display="inline"><semantics><msub><mi>e</mi><mn>2</mn></msub><annotation encoding="application/x-tex">\displaystyle e_{2}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex3.m2" class="ltx_Math" alttext="\displaystyle\mapsto e_{2}" display="inline"><semantics><mrow><mi></mi><mo stretchy="false">↦</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\displaystyle\mapsto e_{2}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex4.m1" class="ltx_Math" alttext="\displaystyle\vdots" display="inline"><semantics><mi mathvariant="normal">⋮</mi><annotation encoding="application/x-tex">\displaystyle\vdots</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex5.m1" class="ltx_Math" alttext="\displaystyle e_{i-1}" display="inline"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">\displaystyle e_{i-1}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex5.m2" class="ltx_Math" alttext="\displaystyle\mapsto e_{i-1}" display="inline"><semantics><mrow><mi></mi><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\displaystyle\mapsto e_{i-1}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex6.m1" class="ltx_Math" alttext="\displaystyle e_{i}" display="inline"><semantics><msub><mi>e</mi><mi>i</mi></msub><annotation encoding="application/x-tex">\displaystyle e_{i}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex6.m2" class="ltx_Math" alttext="\displaystyle\mapsto e_{i+1}" display="inline"><semantics><mrow><mi></mi><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\displaystyle\mapsto e_{i+1}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex7.m1" class="ltx_Math" alttext="\displaystyle e_{i+1}" display="inline"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">\displaystyle e_{i+1}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex7.m2" class="ltx_Math" alttext="\displaystyle\mapsto e_{i+2}" display="inline"><semantics><mrow><mi></mi><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\displaystyle\mapsto e_{i+2}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex8.m1" class="ltx_Math" alttext="\displaystyle\vdots" display="inline"><semantics><mi mathvariant="normal">⋮</mi><annotation encoding="application/x-tex">\displaystyle\vdots</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex9.m1" class="ltx_Math" alttext="\displaystyle e_{p-1}" display="inline"><semantics><msub><mi>e</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">\displaystyle e_{p-1}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex9.m2" class="ltx_Math" alttext="\displaystyle\mapsto e_{p}" display="inline"><semantics><mrow><mi></mi><mo stretchy="false">↦</mo><msub><mi>e</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\displaystyle\mapsto e_{p}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="\sigma:\Delta_{p}\rightarrow X" display="inline"><semantics><mrow><mi>σ</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mi>p</mi></msub><mo stretchy="false">→</mo><mi>X</mi></mrow></mrow><annotation encoding="application/x-tex">\sigma:\Delta_{p}\rightarrow X</annotation></semantics></math> be a singular <math id="Thmtheorem4.p1.m2" class="ltx_Math" alttext="p" display="inline"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-simplex. Define a singular <math id="Thmtheorem4.p1.m3" class="ltx_Math" alttext="p-1" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p-1</annotation></semantics></math>-chain called the boundary of <math id="Thmtheorem4.p1.m4" class="ltx_Math" alttext="\sigma" display="inline"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math> by:</p>
+<table id="Ch2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex11.m1" class="ltx_Math" alttext="\partial\sigma=\sum_{i=0}^{p}(-1)^{i}\sigma\circ F_{i,p}" display="block"><semantics><mrow><mrow><mo rspace="0em">∂</mo><mi>σ</mi></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>p</mi></munderover><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>⁢</mo><mi>σ</mi></mrow><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">\partial\sigma=\sum_{i=0}^{p}(-1)^{i}\sigma\circ F_{i,p}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Note that the map <math id="p1.m1" class="ltx_Math" alttext="\partial:C_{p}(X)\rightarrow C_{p-1}(X)" display="inline"><semantics><mrow><mo>∂</mo><mo rspace="0.278em">:</mo><mrow><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi>C</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\partial:C_{p}(X)\rightarrow C_{p-1}(X)</annotation></semantics></math> is a group homomorphism, it is called the singular boundary operator, or just the boundary operator. Sometimes, we will also denote it by <math id="p1.m2" class="ltx_Math" alttext="\partial_{p}" display="inline"><semantics><msub><mo>∂</mo><mi>p</mi></msub><annotation encoding="application/x-tex">\partial_{p}</annotation></semantics></math>.</p>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">A singular <math id="Thmtheorem5.p1.m1" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>chain <math id="Thmtheorem5.p1.m2" class="ltx_Math" alttext="c" display="inline"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> is called a <math id="Thmtheorem5.p1.m3" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>cycle if we have <math id="Thmtheorem5.p1.m4" class="ltx_Math" alttext="\partial c=0" display="inline"><semantics><mrow><mrow><mo rspace="0em">∂</mo><mi>c</mi></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\partial c=0</annotation></semantics></math>. A singular <math id="Thmtheorem5.p1.m5" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>chain <math id="Thmtheorem5.p1.m6" class="ltx_Math" alttext="c" display="inline"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> is called a <math id="Thmtheorem5.p1.m7" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>boundary if there exists a <math id="Thmtheorem5.p1.m8" class="ltx_Math" alttext="p+1-" display="inline"><semantics><mrow><mi>p</mi><mo>+</mo><mrow><mn>1</mn><mo>−</mo></mrow></mrow><annotation encoding="application/x-tex">p+1-</annotation></semantics></math>chain <math id="Thmtheorem5.p1.m9" class="ltx_Math" alttext="b" display="inline"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math> with <math id="Thmtheorem5.p1.m10" class="ltx_Math" alttext="\partial b=c" display="inline"><semantics><mrow><mrow><mo rspace="0em">∂</mo><mi>b</mi></mrow><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">\partial b=c</annotation></semantics></math>.</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Note that the set of all <math id="p2.m1" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>boundaries and cycles form groups, called <math id="p2.m2" class="ltx_Math" alttext="B_{p}(X),Z_{p}(X)" display="inline"><semantics><mrow><mrow><msub><mi>B</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>Z</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">B_{p}(X),Z_{p}(X)</annotation></semantics></math> respectively. Furthermore, we have that <math id="p2.m3" class="ltx_Math" alttext="\ker\partial_{p}=Z_{p}(X)" display="inline"><semantics><mrow><mrow><mi>ker</mi><mo lspace="0.167em">⁢</mo><msub><mo rspace="0.1389em">∂</mo><mi>p</mi></msub></mrow><mo lspace="0.1389em">=</mo><mrow><msub><mi>Z</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\ker\partial_{p}=Z_{p}(X)</annotation></semantics></math>, and <math id="p2.m4" class="ltx_Math" alttext="\mathrm{Im}(\partial_{p+1})=B_{p}(X)" display="inline"><semantics><mrow><mrow><mi>Im</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mo lspace="0em" rspace="0em">∂</mo><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>B</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\mathrm{Im}(\partial_{p+1})=B_{p}(X)</annotation></semantics></math>.</p>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 1.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem6.p1.m1" class="ltx_Math" alttext="c" display="inline"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> is a singular chain, then <math id="Thmtheorem6.p1.m2" class="ltx_Math" alttext="\partial(\partial c=0)" display="inline"><semantics><mrow><mo rspace="0em">∂</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo lspace="0em" rspace="0em">∂</mo><mi>c</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\partial(\partial c=0)</annotation></semantics></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Note that it suffices to show the statement for singular <math id="p3.m1" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>simplices. We check the statement for <math id="p3.m2" class="ltx_Math" alttext="p\geq 2" display="inline"><semantics><mrow><mi>p</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">p\geq 2</annotation></semantics></math>. First we prove the following identity, for <math id="p3.m3" class="ltx_Math" alttext="i\leq j" display="inline"><semantics><mrow><mi>i</mi><mo>≤</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i\leq j</annotation></semantics></math>:</p>
+<table id="Ch2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex12.m1" class="ltx_Math" alttext="F_{i,p}\circ F_{j,p}=F_{j,p}\circ F_{i-1,p}" display="block"><semantics><mrow><mrow><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>j</mi><mo>,</mo><mi>p</mi></mrow></msub></mrow><mo>=</mo><mrow><msub><mi>F</mi><mrow><mi>j</mi><mo>,</mo><mi>p</mi></mrow></msub><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi>p</mi></mrow></msub></mrow></mrow><annotation encoding="application/x-tex">F_{i,p}\circ F_{j,p}=F_{j,p}\circ F_{i-1,p}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Indeed, we have:</p>
+<table id="Ch2.Ex13" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Ch2.Ex13X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex13X.m2" class="ltx_Math" alttext="\displaystyle\begin{array}[]{ccc}F_{j,p-1}&amp;F_{i,p}\\
+e_{0}\mapsto&amp;e_{0}\mapsto e_{0}\\
+\vdots&amp;\vdots\\
+e_{j-1}\mapsto&amp;e_{j-1}\mapsto e_{j-1}\\
+e_{j}\mapsto&amp;e_{j+1}\mapsto e_{j+1}\\
+\vdots&amp;\vdots\\
+e_{i-2}\mapsto&amp;e_{i-1}\mapsto e_{i-1}\\
+e_{i-1}\mapsto&amp;e_{i}\mapsto e_{i+1}\\
+\vdots&amp;\vdots\\
+e_{p-2}\mapsto&amp;e_{p-1}\mapsto e_{p}\end{array}\quad=\quad\begin{array}[]{ccc}F%
+_{i-1,p-1}&amp;F_{j,p}\\
+e_{0}\mapsto&amp;e_{0}\mapsto e_{0}\\
+\vdots&amp;\vdots\\
+e_{j-1}\mapsto&amp;e_{j-1}\mapsto e_{j-1}\\
+e_{j}\mapsto&amp;e_{j}\mapsto e_{j+1}\\
+\vdots&amp;\vdots\\
+e_{i-2}\mapsto&amp;e_{i-2}\mapsto e_{i-1}\\
+e_{i-1}\mapsto&amp;e_{i}\mapsto e_{i+1}\\
+\vdots&amp;\vdots\\
+e_{p-2}\mapsto&amp;e_{p-1}\mapsto e_{p}\end{array}" display="inline"><semantics><mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd><msub><mi>F</mi><mrow><mi>j</mi><mo>,</mo><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mtd><mtd><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mn>0</mn></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mn>0</mn></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mn>0</mn></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mi>j</mi></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>2</mn></mrow></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mi>i</mi></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mrow><mi>p</mi><mo>−</mo><mn>2</mn></mrow></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mi>p</mi></msub></mrow></mtd><mtd></mtd></mtr></mtable><mspace width="1.167em"></mspace><mo>=</mo><mspace width="1.167em"></mspace><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd><msub><mi>F</mi><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mtd><mtd><msub><mi>F</mi><mrow><mi>j</mi><mo>,</mo><mi>p</mi></mrow></msub></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mn>0</mn></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mn>0</mn></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mn>0</mn></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mi>j</mi></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mi>j</mi></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>2</mn></mrow></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>2</mn></mrow></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mi>i</mi></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd></mtr><mtr><mtd><mrow><msub><mi>e</mi><mrow><mi>p</mi><mo>−</mo><mn>2</mn></mrow></msub><mo stretchy="false">↦</mo><mi></mi></mrow></mtd><mtd><mrow><msub><mi>e</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">↦</mo><msub><mi>e</mi><mi>p</mi></msub></mrow></mtd><mtd></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\displaystyle\begin{array}[]{ccc}F_{j,p-1}&amp;F_{i,p}\\
+e_{0}\mapsto&amp;e_{0}\mapsto e_{0}\\
+\vdots&amp;\vdots\\
+e_{j-1}\mapsto&amp;e_{j-1}\mapsto e_{j-1}\\
+e_{j}\mapsto&amp;e_{j+1}\mapsto e_{j+1}\\
+\vdots&amp;\vdots\\
+e_{i-2}\mapsto&amp;e_{i-1}\mapsto e_{i-1}\\
+e_{i-1}\mapsto&amp;e_{i}\mapsto e_{i+1}\\
+\vdots&amp;\vdots\\
+e_{p-2}\mapsto&amp;e_{p-1}\mapsto e_{p}\end{array}\quad=\quad\begin{array}[]{ccc}F%
+_{i-1,p-1}&amp;F_{j,p}\\
+e_{0}\mapsto&amp;e_{0}\mapsto e_{0}\\
+\vdots&amp;\vdots\\
+e_{j-1}\mapsto&amp;e_{j-1}\mapsto e_{j-1}\\
+e_{j}\mapsto&amp;e_{j}\mapsto e_{j+1}\\
+\vdots&amp;\vdots\\
+e_{i-2}\mapsto&amp;e_{i-2}\mapsto e_{i-1}\\
+e_{i-1}\mapsto&amp;e_{i}\mapsto e_{i+1}\\
+\vdots&amp;\vdots\\
+e_{p-2}\mapsto&amp;e_{p-1}\mapsto e_{p}\end{array}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">therefore:</p>
+<table id="Ch2.S6.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex14.m1" class="ltx_Math" alttext="\displaystyle\partial(\partial\sigma)" display="inline"><semantics><mrow><mo rspace="0em">∂</mo><mrow><mo stretchy="false">(</mo><mrow><mo lspace="0em" rspace="0em">∂</mo><mi>σ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\displaystyle\partial(\partial\sigma)</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex14.m2" class="ltx_Math" alttext="\displaystyle=\sum_{i=0}^{p}(-1)^{i+j}\sigma\circ F_{i,p}\circ F_{j,p-1}" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>p</mi></munderover></mstyle><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>⁢</mo><mi>σ</mi></mrow><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>j</mi><mo>,</mo><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=\sum_{i=0}^{p}(-1)^{i+j}\sigma\circ F_{i,p}\circ F_{j,p-1}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex15.m1" class="ltx_Math" alttext="\displaystyle=\sum_{0\leq j&lt;}\sum_{i\leq p}(-1)^{i+j}\sigma\circ F_{i,p}\circ F%
+_{j,p-1}+\sum_{0\leq i&lt;j\leq p-1}(-1)^{i+j}\sigma\circ F_{i,p}\circ F_{j,p-1}" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mn>0</mn><mo>≤</mo><mi>j</mi><mo>&lt;</mo><mi></mi></mrow></munder></mstyle><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>≤</mo><mi>p</mi></mrow></munder></mstyle><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>⁢</mo><mi>σ</mi></mrow><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>j</mi><mo>,</mo><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mn>0</mn><mo>≤</mo><mi>i</mi><mo>&lt;</mo><mi>j</mi><mo>≤</mo><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></mrow></munder></mstyle><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>⁢</mo><mi>σ</mi></mrow><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>j</mi><mo>,</mo><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=\sum_{0\leq j&lt;}\sum_{i\leq p}(-1)^{i+j}\sigma\circ F_{i,p}\circ F%
+_{j,p-1}+\sum_{0\leq i&lt;j\leq p-1}(-1)^{i+j}\sigma\circ F_{i,p}\circ F_{j,p-1}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody><tr class="ltx_eqn_row ltx_align_baseline"><td class="ltx_eqn_cell ltx_align_left" style="white-space:normal;" colspan="5">making the change of variables <math id="Ch2.S6.EGx2.m1" class="ltx_Math" alttext="j^{\prime}=i,j=i^{\prime}-1" display="inline"><semantics><mrow><mrow><msup><mi>j</mi><mo>′</mo></msup><mo>=</mo><mi>i</mi></mrow><mo>,</mo><mrow><mi>j</mi><mo>=</mo><mrow><msup><mi>i</mi><mo>′</mo></msup><mo>−</mo><mn>1</mn></mrow></mrow></mrow><annotation encoding="application/x-tex">j^{\prime}=i,j=i^{\prime}-1</annotation></semantics></math>, we get:</td></tr></tbody>
+<tbody id="Ch2.Ex17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex17.m1" class="ltx_Math" alttext="\displaystyle=\sum_{0\leq j&lt;}\sum_{i\leq p}(-1)^{i+j}\sigma\circ F_{i,p}\circ F%
+_{j,p-1}+\sum_{0\leq j^{\prime}&lt;}\sum_{i^{\prime}\leq p}(-1)^{i^{\prime}+j^{%
+\prime}+1}\sigma\circ F_{j^{\prime},p}\circ F_{i^{\prime}-1,p-1}" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mn>0</mn><mo>≤</mo><mi>j</mi><mo>&lt;</mo><mi></mi></mrow></munder></mstyle><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>≤</mo><mi>p</mi></mrow></munder></mstyle><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>⁢</mo><mi>σ</mi></mrow><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>j</mi><mo>,</mo><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><mn>0</mn><mo>≤</mo><msup><mi>j</mi><mo>′</mo></msup><mo>&lt;</mo><mi></mi></mrow></munder></mstyle><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mrow><msup><mi>i</mi><mo>′</mo></msup><mo>≤</mo><mi>p</mi></mrow></munder></mstyle><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><msup><mi>i</mi><mo>′</mo></msup><mo>+</mo><msup><mi>j</mi><mo>′</mo></msup><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>σ</mi></mrow><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><msup><mi>j</mi><mo>′</mo></msup><mo>,</mo><mi>p</mi></mrow></msub><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mrow><msup><mi>i</mi><mo>′</mo></msup><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=\sum_{0\leq j&lt;}\sum_{i\leq p}(-1)^{i+j}\sigma\circ F_{i,p}\circ F%
+_{j,p-1}+\sum_{0\leq j^{\prime}&lt;}\sum_{i^{\prime}\leq p}(-1)^{i^{\prime}+j^{%
+\prime}+1}\sigma\circ F_{j^{\prime},p}\circ F_{i^{\prime}-1,p-1}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex18.m1" class="ltx_Math" alttext="\displaystyle=0\quad\text{(using the identity we just proved)}" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mn>0</mn><mspace width="1em"></mspace><mtext>(using the identity we just proved)</mtext></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=0\quad\text{(using the identity we just proved)}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Therefore, we have that <math id="p5.m1" class="ltx_Math" alttext="B_{p}(X)\leq Z_{p}(X)\leq C_{p}(X)" display="inline"><semantics><mrow><mrow><msub><mi>B</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><msub><mi>Z</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">B_{p}(X)\leq Z_{p}(X)\leq C_{p}(X)</annotation></semantics></math>. By convention, we take <math id="p5.m2" class="ltx_Math" alttext="C_{-1}(X)=0" display="inline"><semantics><mrow><mrow><msub><mi>C</mi><mrow><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C_{-1}(X)=0</annotation></semantics></math> for any <math id="p5.m3" class="ltx_Math" alttext="X" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.</p>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">Define the <math id="Thmtheorem7.p1.m1" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>th singular homology group of <math id="Thmtheorem7.p1.m2" class="ltx_Math" alttext="X" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> by</p>
+<table id="Ch2.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex19.m1" class="ltx_Math" alttext="H_{p}(X)=\frac{\ker(\partial_{p})}{\mathrm{Im}(\partial_{p+1})}" display="block"><semantics><mrow><mrow><msub><mi>H</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>ker</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mo lspace="0em" rspace="0em">∂</mo><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>Im</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mo lspace="0em" rspace="0em">∂</mo><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">H_{p}(X)=\frac{\ker(\partial_{p})}{\mathrm{Im}(\partial_{p+1})}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let <math id="p6.m1" class="ltx_Math" alttext="f:X\rightarrow Y" display="inline"><semantics><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>X</mi><mo stretchy="false">→</mo><mi>Y</mi></mrow></mrow><annotation encoding="application/x-tex">f:X\rightarrow Y</annotation></semantics></math> be a map. Define <math id="p6.m2" class="ltx_Math" alttext="f_{\sharp}:C_{p}(X)\rightarrow C_{p}(Y)" display="inline"><semantics><mrow><msub><mi>f</mi><mi mathvariant="normal">♯</mi></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">f_{\sharp}:C_{p}(X)\rightarrow C_{p}(Y)</annotation></semantics></math> a group homomorphism by <math id="p6.m3" class="ltx_Math" alttext="f_{\sharp}(\sigma)=f\circ\sigma" display="inline"><semantics><mrow><mrow><msub><mi>f</mi><mi mathvariant="normal">♯</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>σ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo lspace="0.222em" rspace="0.222em">∘</mo><mi>σ</mi></mrow></mrow><annotation encoding="application/x-tex">f_{\sharp}(\sigma)=f\circ\sigma</annotation></semantics></math> on the <math id="p6.m4" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>simplices.
+<br class="ltx_break"></p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Note that</p>
+<table id="Ch2.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex20.m1" class="ltx_Math" alttext="f_{\sharp}(\partial\sigma)=f_{\sharp}\left(\sum_{i=0}^{p}(-1)^{i}\sigma\circ F%
+_{i,p}\right)=\sum_{i=0}^{p}(-1)^{i}f\circ\sigma\circ F_{i,p}=\partial(f_{%
+\sharp}\sigma)" display="block"><semantics><mrow><mrow><msub><mi>f</mi><mi mathvariant="normal">♯</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo lspace="0em" rspace="0em">∂</mo><mi>σ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>f</mi><mi mathvariant="normal">♯</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><munderover><mo lspace="0em" movablelimits="false" rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>p</mi></munderover><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>⁢</mo><mi>σ</mi></mrow><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>p</mi></munderover><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>⁢</mo><mi>f</mi></mrow><mo lspace="0.222em" rspace="0.222em">∘</mo><mi>σ</mi><mo lspace="0.222em" rspace="0.222em">∘</mo><msub><mi>F</mi><mrow><mi>i</mi><mo>,</mo><mi>p</mi></mrow></msub></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" rspace="0em">∂</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>f</mi><mi mathvariant="normal">♯</mi></msub><mo>⁢</mo><mi>σ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">f_{\sharp}(\partial\sigma)=f_{\sharp}\left(\sum_{i=0}^{p}(-1)^{i}\sigma\circ F%
+_{i,p}\right)=\sum_{i=0}^{p}(-1)^{i}f\circ\sigma\circ F_{i,p}=\partial(f_{%
+\sharp}\sigma)</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">therefore, <math id="p8.m1" class="ltx_Math" alttext="f_{\sharp}" display="inline"><semantics><msub><mi>f</mi><mi mathvariant="normal">♯</mi></msub><annotation encoding="application/x-tex">f_{\sharp}</annotation></semantics></math> maps <math id="p8.m2" class="ltx_Math" alttext="Z_{p}(X)" display="inline"><semantics><mrow><msub><mi>Z</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">Z_{p}(X)</annotation></semantics></math> to <math id="p8.m3" class="ltx_Math" alttext="Z_{p}(Y)" display="inline"><semantics><mrow><msub><mi>Z</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">Z_{p}(Y)</annotation></semantics></math>, and <math id="p8.m4" class="ltx_Math" alttext="B_{p}(X)" display="inline"><semantics><mrow><msub><mi>B</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">B_{p}(X)</annotation></semantics></math> to <math id="p8.m5" class="ltx_Math" alttext="B_{p}(Y)" display="inline"><semantics><mrow><msub><mi>B</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">B_{p}(Y)</annotation></semantics></math>, so that it induces a map</p>
+<table id="Ch2.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex21.m1" class="ltx_Math" alttext="f_{\ast}:H_{p}(X)\rightarrow H_{p}(Y)." display="block"><semantics><mrow><mrow><msub><mi>f</mi><mo>∗</mo></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>H</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi>H</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">f_{\ast}:H_{p}(X)\rightarrow H_{p}(Y).</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 1.8</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Taking the <math id="Thmtheorem8.p1.m1" class="ltx_Math" alttext="p-" display="inline"><semantics><mrow><mi>p</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">p-</annotation></semantics></math>th homology group is a functor <math id="Thmtheorem8.p1.m2" class="ltx_Math" alttext="{\textbf{Top}}\rightarrow{\textbf{Ab. Grp}}" display="inline"><semantics><mrow><mtext class="ltx_mathvariant_bold">Top</mtext><mo stretchy="false">→</mo><mtext class="ltx_mathvariant_bold">Ab. Grp</mtext></mrow><annotation encoding="application/x-tex">{\textbf{Top}}\rightarrow{\textbf{Ab. Grp}}</annotation></semantics></math></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Exercise. We have already proved the hard bits.
+∎</p>
+</div>
+</div>
+<div id="Thmexercise1" class="ltx_theorem ltx_theorem_exercise">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Ex 1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmexercise1.p1" class="ltx_para">
+<p class="ltx_p">What does abstract nonsense tell you about the map induced by <math id="Thmexercise1.p1.m1" class="ltx_Math" alttext="f" display="inline"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> when it is a homeomorphism, and when <math id="Thmexercise1.p1.m2" class="ltx_Math" alttext="f" display="inline"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> is a retraction?</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch2.html" title="In Algebraic Topology" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Singular Homology</span></a><a href="bib.html" title="In Algebraic Topology" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">Bibliography</span></a><a href="Ch2.S2.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>A Brief Detour Into Homological Alegbra</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Thu Apr 16 00:16:35 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

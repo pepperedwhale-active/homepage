@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5. Mayer-Vietoris Theorem ‣ Chapter 2 Singular Homology ‣ Algebraic Topology</title>
+<!--Generated on Thu Apr 16 00:16:35 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on .-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="up" href="Ch2.html" title="Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="up up" href="algtop.html" title="Algebraic Topology">
+<link rel="start" href="algtop.html" title="Algebraic Topology">
+<link rel="prev" href="Ch2.S4.html" title="4. Homotopy Invariance ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="next" href="Ch2.S6.html" title="6. Homology Groups of Spheres ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S1.html" title="1. The Singular Homology Group ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S2.html" title="2. A Brief Detour Into Homological Alegbra ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S3.html" title="3. Some Elementary Computations ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S4.html" title="4. Homotopy Invariance ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S6.html" title="6. Homology Groups of Spheres ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Fundamental Group ‣ Algebraic Topology">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="bibliography" href="bib.html" title="Bibliography ‣ Algebraic Topology">
+<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch2.html" title="In Algebraic Topology" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Singular Homology</span></a><a href="Ch2.S4.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Homotopy Invariance</span></a><a href="Ch2.S6.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Homology Groups of Spheres</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_font_bold ltx_title_section" style="font-size:120%;">5.  Mayer-Vietoris Theorem</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">It turns out that for calculating homology groups, a result analogous to the Seifert-Van Kampen theorem exists. We begin by investigating the same diagram that we investigate for the Van Kampen theorem, but from the different viewpoint.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="X=U\cup V" display="inline"><semantics><mrow><mi>X</mi><mo>=</mo><mrow><mi>U</mi><mo>∪</mo><mi>V</mi></mrow></mrow><annotation encoding="application/x-tex">X=U\cup V</annotation></semantics></math> be a union of two open subsets. We have inclusion maps</p>
+<table id="Ch2.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><svg id="Ch2.Ex30.m1.pic1" class="ltx_picture ltx_markedasmath" height="108.56" overflow="visible" version="1.1" width="163.34"><g fill="#000000" stroke="#000000" transform="translate(0,108.56) matrix(1 0 0 -1 0 0) translate(81.67,0) translate(0,54.28)"><g stroke-width="0.4pt" transform="matrix(1.0 0.0 0.0 1.0 -81.67 -54.28)"><g class="ltx_tikzmatrix" transform="matrix(1 0 0 -1 0 98.77)"><g class="ltx_tikzmatrix_row" transform="matrix(1 0 0 1 0 14.52)"><g class="ltx_tikzmatrix_col ltx_nopad_l ltx_nopad_r" fill="#000000" stroke="#000000" transform="matrix(1 0 0 -1 49.49 0) translate(44.64,0) matrix(1.0 0.0 0.0 1.0 -5.48 0)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="10.96"><math id="Ch2.Ex30.m1.pic1.m1" class="ltx_Math" alttext="{U}" display="inline"><semantics><mi>U</mi><annotation encoding="application/x-tex">{U}</annotation></semantics></math></foreignObject></g></g><g class="ltx_tikzmatrix_row" transform="matrix(1 0 0 1 0 59.01)"><g class="ltx_tikzmatrix_col ltx_nopad_l ltx_nopad_r" fill="#000000" stroke="#000000" transform="matrix(1 0 0 -1 0 0) translate(24.7,0) matrix(1.0 0.0 0.0 1.0 -18.74 0)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="37.48"><math id="Ch2.Ex30.m1.pic1.m2" class="ltx_Math" alttext="{{U\cap V}}" display="inline"><semantics><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">{{U\cap V}}</annotation></semantics></math></foreignObject></g><g class="ltx_tikzmatrix_col ltx_nopad_l ltx_nopad_r" fill="#000000" stroke="#000000" transform="matrix(1 0 0 -1 105.66 0) translate(45.44,0) matrix(1.0 0.0 0.0 1.0 -6.27 0)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="12.55"><math id="Ch2.Ex30.m1.pic1.m3" class="ltx_Math" alttext="{X}" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">{X}</annotation></semantics></math></foreignObject></g></g><g class="ltx_tikzmatrix_row" transform="matrix(1 0 0 1 0 103.5)"><g class="ltx_tikzmatrix_col ltx_nopad_l ltx_nopad_r" fill="#000000" stroke="#000000" transform="matrix(1 0 0 -1 49.39 0) translate(44.74,0) matrix(1.0 0.0 0.0 1.0 -5.57 0)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="11.15"><math id="Ch2.Ex30.m1.pic1.m4" class="ltx_Math" alttext="{V}" display="inline"><semantics><mi>V</mi><annotation encoding="application/x-tex">{V}</annotation></semantics></math></foreignObject></g></g></g></g><g stroke-width="0.39998pt"><path d="M 23.73 29.36 L 56.49 3.77" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.78813 -0.61551 0.61551 0.78813 56.71 3.6)"><path d="M -2.88 3.32 C -2.35 1.33 -1.18 0.39 0 0 C -1.18 -0.39 -2.35 -1.33 -2.88 -3.32" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 43.58 19.65)"><foreignObject height="6.73" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="5.35"><math id="Ch2.Ex30.m1.pic1.m5" class="ltx_Math" alttext="\scriptstyle{k}" display="inline"><semantics><mi mathsize="70%">k</mi><annotation encoding="application/x-tex">\scriptstyle{k}</annotation></semantics></math></foreignObject></g></g><g stroke-width="0.39998pt"><path d="M -39.28 5 L 0.29 30.36" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.84196 0.53952 -0.53952 0.84196 0.52 30.51)"><path d="M -2.88 3.32 C -2.35 1.33 -1.18 0.39 0 0 C -1.18 -0.39 -2.35 -1.33 -2.88 -3.32" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -25.86 21.09)"><foreignObject height="6.39" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="3.34"><math id="Ch2.Ex30.m1.pic1.m6" class="ltx_Math" alttext="\scriptstyle{i}" display="inline"><semantics><mi mathsize="70%">i</mi><annotation encoding="application/x-tex">\scriptstyle{i}</annotation></semantics></math></foreignObject></g></g><g stroke-width="0.39998pt"><path d="M -43.24 -15.13 L 0.19 -42.96" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.84196 -0.53954 0.53954 0.84196 0.42 -43.11)"><path d="M -2.88 3.32 C -2.35 1.33 -1.18 0.39 0 0 C -1.18 -0.39 -2.35 -1.33 -2.88 -3.32" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -29.09 -38.84)"><foreignObject height="8.27" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="4.54"><math id="Ch2.Ex30.m1.pic1.m7" class="ltx_Math" alttext="\scriptstyle{j}" display="inline"><semantics><mi mathsize="70%">j</mi><annotation encoding="application/x-tex">\scriptstyle{j}</annotation></semantics></math></foreignObject></g></g><g stroke-width="0.39998pt"><path d="M 24.27 -41.6 L 57.73 -15.47" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.78816 0.61546 -0.61546 0.78816 57.95 -15.3)"><path d="M -2.88 3.32 C -2.35 1.33 -1.18 0.39 0 0 C -1.18 -0.39 -2.35 -1.33 -2.88 -3.32" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 44.48 -38.35)"><foreignObject height="6.73" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="3.08"><math id="Ch2.Ex30.m1.pic1.m8" class="ltx_Math" alttext="\scriptstyle{l}" display="inline"><semantics><mi mathsize="70%">l</mi><annotation encoding="application/x-tex">\scriptstyle{l}</annotation></semantics></math></foreignObject></g></g></g></svg></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">and we can ”take the homology” of this diagram, to get the corresponding diagram of homology groups. The Mayer-Vietoris theorem says the following:</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5.1</span></span><span class="ltx_text ltx_font_bold"> </span>(Mayer-Vietoris)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="X" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> be a topological space, and let <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="U,V," display="inline"><semantics><mrow><mrow><mi>U</mi><mo>,</mo><mi>V</mi></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">U,V,</annotation></semantics></math> be open subsets whose union is <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="X" display="inline"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>. Then for each <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="p" display="inline"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> there is a homomorphism <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="\partial_{\ast}:H_{p}(X)\rightarrow H_{p-1}(U\cap V)" display="inline"><semantics><mrow><msub><mo>∂</mo><mo>∗</mo></msub><mo rspace="0.278em">:</mo><mrow><mrow><msub><mi>H</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi>H</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\partial_{\ast}:H_{p}(X)\rightarrow H_{p-1}(U\cap V)</annotation></semantics></math> such that the following sequence is exact:</span></p>
+<table id="Ch2.S6.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.Ex31"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex31.m1" class="ltx_Math" alttext="\displaystyle\cdots\overset{\partial_{\ast}}{\rightarrow}H_{p}(U\cap V)%
+\overset{i_{\ast}\oplus j_{\ast}}{\rightarrow}H_{p}(U)\oplus H_{p}(V)\overset{%
+k_{\ast}-l_{\ast}}{\rightarrow}" display="inline"><semantics><mrow><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mover accent="true"><mo stretchy="false">→</mo><msub><mo>∂</mo><mo>∗</mo></msub></mover><mo>⁢</mo><msub><mi>H</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mo stretchy="false">→</mo><mrow><msub><mi>i</mi><mo>∗</mo></msub><mo>⊕</mo><msub><mi>j</mi><mo>∗</mo></msub></mrow></mover><mo>⁢</mo><msub><mi>H</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊕</mo><mrow><msub><mi>H</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mo stretchy="false">→</mo><mrow><msub><mi>k</mi><mo>∗</mo></msub><mo>−</mo><msub><mi>l</mi><mo>∗</mo></msub></mrow></mover></mrow></mrow><annotation encoding="application/x-tex">\displaystyle\cdots\overset{\partial_{\ast}}{\rightarrow}H_{p}(U\cap V)%
+\overset{i_{\ast}\oplus j_{\ast}}{\rightarrow}H_{p}(U)\oplus H_{p}(V)\overset{%
+k_{\ast}-l_{\ast}}{\rightarrow}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex31.m2" class="ltx_Math" alttext="\displaystyle H_{p}(X)" display="inline"><semantics><mrow><msub><mi>H</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\displaystyle H_{p}(X)</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex32.m1" class="ltx_Math" alttext="\displaystyle\overset{\partial_{\ast}}{\rightarrow}" display="inline"><semantics><mover accent="true"><mo stretchy="false">→</mo><msub><mo>∂</mo><mo>∗</mo></msub></mover><annotation encoding="application/x-tex">\displaystyle\overset{\partial_{\ast}}{\rightarrow}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex32.m2" class="ltx_Math" alttext="\displaystyle H_{p-1}(U\cap V)\overset{i_{\ast}\oplus j_{\ast}}{\rightarrow}\cdots" display="inline"><semantics><mrow><msub><mi>H</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mo stretchy="false">→</mo><mrow><msub><mi>i</mi><mo>∗</mo></msub><mo>⊕</mo><msub><mi>j</mi><mo>∗</mo></msub></mrow></mover><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow><annotation encoding="application/x-tex">\displaystyle H_{p-1}(U\cap V)\overset{i_{\ast}\oplus j_{\ast}}{\rightarrow}\cdots</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Read <cite class="ltx_cite ltx_citemacro_cite">[<a href="bib.html#bib1" title="Introduction to topological manifolds" class="ltx_ref">LEE10</a>]</cite>
+∎</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch2.S4.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Homotopy Invariance</span></a><a href="bib.html" title="In Algebraic Topology" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">Bibliography</span></a><a href="Ch2.S6.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Homology Groups of Spheres</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Thu Apr 16 00:16:35 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

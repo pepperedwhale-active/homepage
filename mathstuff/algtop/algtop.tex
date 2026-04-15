@@ -290,12 +290,29 @@ These are not hard to prove, but they are results to keep in mind.
 \section{Van - Kampen Theorem}
 Let $X$ be a topological space, and $U,V$ open subsets of $X$ with the property that $X = U\cup V$, and $U\cap V\neq\emptyset$.
 The four inclusion maps:
-[insert figure]
-induce fundamental group homomorphisms
-[insert figure]
-By the universal property of the free product, there exists a homomorphism $\Phi: \pi_{1}(U,p)\star\pi_{1}(X,p)$ such that the following diagram commutes
-[insert figure]
 
+\[\begin{tikzcd}
+	&& U && \\
+	{U\cap V} &&&& X \\
+	&& V
+	\arrow["{j_1}", hook, from=1-3, to=2-5]
+	\arrow["{i_1}", hook, from=2-1, to=1-3]
+	\arrow["{i_1}"', hook, from=2-1, to=3-3]
+	\arrow["{j_2}"', hook, from=3-3, to=2-5]
+\end{tikzcd}\]
+
+induce fundamental group homomorphisms
+]
+By the universal property of the free product, there exists a homomorphism $\Phi: \pi_{1}(U,p)\star\pi_{1}(X,p)$ such that the following diagram commutes
+\[\begin{tikzcd}
+	&& {\pi_1(U,p)} && \\
+	{\pi_1(U\cap V,p)} &&&& {\pi_1(X,p)} \\
+	&& {\pi_1(V,p)}
+	\arrow["{(j_1)_\star}", from=1-3, to=2-5]
+	\arrow["{(i_1)_{\ast}}", from=2-1, to=1-3]
+	\arrow["{(i_1)_{\star}}"', from=2-1, to=3-3]
+	\arrow["{(j_2)_\star}"', from=3-3, to=2-5]
+\end{tikzcd}\]
 \begin{theorem}
 
 Let $X$ be a top. sp. Suppose that $U,V\subseteq X$ are open with $X = U\cup V$, $U$ and $V$ path connected. Let $p\in U\cap V$, and define $C\subseteq \pi_{1}(U,p)\star \pi_{1}(V,p)$ by $$C = \{(i_{\star}\gamma)(j_{\star}\gamma) : \gamma\in\pi_{1}(U\cap V, p)\}$$
@@ -326,6 +343,9 @@ Note for example, that every point in a manifold is a nondegenerate base point.
     We prove this for the case of two spaces. We want to be able to take $U = X_1, V=X_2$, but the problem is that these are not open. So, if $W_i$ are neighbourhood of $p_i$ admitting strong deformation retracts onto $p_i$, we consider $U_1 = q(X_1\sqcup W_2), U_2 = q(X_2\sqcup W_1)$ where $q$ is the canonical map $X_1\sqcup X_2\rightarrow X_1\vee X_2$. Further, the inclusions $$\{\star\}\hookrightarrow U_1\cap U_2\\ X_1\hookrightarrow U_1, \\ X_2\hookrightarrow U_2$$ are homotopy equivalences. Furthermore, $U_1\cap U_2$ is contractible hence simply connected, so that $$\pi_1(U_1,\star)\star\pi_1(U_2,\star)\rightarrow \pi_!(X_1\vee X_2,\star)$$ is an isomorphism by the Van Kampen Theorem. But since $i_1,i_2$ were homotopy equivalences, we have isomorphisms $\pi_1(X_i,p_i)\rightarrow \pi_1(U_i,\star)$. By induction, we are done.
 \end{proof}
     \end{example}
+
 \bibliographystyle{alpha}
 \bibliography{refs.bib}
 \end{document}
+
+

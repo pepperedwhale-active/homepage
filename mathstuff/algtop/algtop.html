@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>Algebraic Topology</title>
-<!--Generated on Wed Apr  1 23:54:50 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Thu Apr 16 00:16:35 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 <!--Document created on   %**** algtop.tex Line 50 **** .-->
 
 <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -11,12 +11,10 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <link rel="next" href="Ch1.html" title="Chapter 1 Fundamental Group ‣ Algebraic Topology">
 <link rel="chapter" href="Ch1.html" title="Chapter 1 Fundamental Group ‣ Algebraic Topology">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Singular Homology ‣ Algebraic Topology">
 <link rel="bibliography" href="bib.html" title="Bibliography ‣ Algebraic Topology">
 <script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head>
 <body>
-<a href="../../index.html">Home</a> &#8594
-<a href="../../notes.html">Notes/Posts</a>
-
 <div class="ltx_page_main">
 <header class="ltx_page_header">
 <div class="ltx_align_center">
@@ -58,6 +56,17 @@
 <li class="ltx_tocentry ltx_tocentry_section"><a href="Ch1.S5.html" title="In Chapter 1 Fundamental Group ‣ Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Van - Kampen Theorem</span></a></li>
 </ol>
 </li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch2.html" title="In Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Singular Homology</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch2.S1.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>The Singular Homology Group</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch2.S2.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>A Brief Detour Into Homological Alegbra</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch2.S3.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Some Elementary Computations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch2.S4.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Homotopy Invariance</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch2.S5.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Mayer-Vietoris Theorem</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch2.S6.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Homology Groups of Spheres</span></a></li>
+</ol>
+</li>
 <li class="ltx_tocentry ltx_tocentry_bibliography"><a href="bib.html" title="In Algebraic Topology" class="ltx_ref"><span class="ltx_text ltx_ref_title">Bibliography</span></a></li>
 </ol></nav>
 </article>
@@ -66,7 +75,7 @@
 <div class="ltx_align_center">
 <a href="bib.html" title="In Algebraic Topology" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">Bibliography</span></a><a href="Ch1.html" title="In Algebraic Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Fundamental Group</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Wed Apr  1 23:54:50 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Thu Apr 16 00:16:35 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 </body>
