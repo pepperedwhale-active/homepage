@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>7. Degree Theory ‣ Chapter 2 Singular Homology ‣ Algebraic Topology</title>
+<!--Generated on Tue Apr 21 02:38:24 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on .-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="up" href="Ch2.html" title="Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="up up" href="algtop.html" title="Algebraic Topology">
+<link rel="start" href="algtop.html" title="Algebraic Topology">
+<link rel="prev" href="Ch2.S6.html" title="6. Homology Groups of Spheres ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="next" href="bib.html" title="Bibliography ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S1.html" title="1. The Singular Homology Group ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S2.html" title="2. A Brief Detour Into Homological Alegbra ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S3.html" title="3. Some Elementary Computations ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S4.html" title="4. Homotopy Invariance ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S5.html" title="5. Mayer-Vietoris Theorem ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="section" href="Ch2.S6.html" title="6. Homology Groups of Spheres ‣ Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Fundamental Group ‣ Algebraic Topology">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Singular Homology ‣ Algebraic Topology">
+<link rel="bibliography" href="bib.html" title="Bibliography ‣ Algebraic Topology">
+<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch2.html" title="In Algebraic Topology" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Singular Homology</span></a><a href="Ch2.S6.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Homology Groups of Spheres</span></a><a href="bib.html" title="In Algebraic Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">Bibliography</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_font_bold ltx_title_section" style="font-size:120%;">7.  Degree Theory</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="p1.m1" class="ltx_Math" alttext="n\geq 1" display="inline"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n\geq 1</annotation></semantics></math>, and let <math id="p1.m2" class="ltx_Math" alttext="f:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}" display="inline"><semantics><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>𝕊</mi><mi>n</mi></msup><mo stretchy="false">→</mo><msup><mi>𝕊</mi><mi>n</mi></msup></mrow></mrow><annotation encoding="application/x-tex">f:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}</annotation></semantics></math> be continuous. The map <math id="p1.m3" class="ltx_Math" alttext="f_{\ast}:H_{n}(\mathbb{S}^{n})\rightarrow H_{n}(\mathbb{S}^{n})" display="inline"><semantics><mrow><msub><mi>f</mi><mo>∗</mo></msub><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝕊</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝕊</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">f_{\ast}:H_{n}(\mathbb{S}^{n})\rightarrow H_{n}(\mathbb{S}^{n})</annotation></semantics></math>, is a homomorphism <math id="p1.m4" class="ltx_Math" alttext="\mathbb{Z}\rightarrow\mathbb{Z}" display="inline"><semantics><mrow><mi>ℤ</mi><mo stretchy="false">→</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">\mathbb{Z}\rightarrow\mathbb{Z}</annotation></semantics></math>, which corresponds to multiplication by an integer, called the degree of <math id="p1.m5" class="ltx_Math" alttext="f" display="inline"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 7.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="n\geq 1" display="inline"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n\geq 1</annotation></semantics></math>, and <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="f,g:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}" display="inline"><semantics><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>𝕊</mi><mi>n</mi></msup><mo stretchy="false">→</mo><msup><mi>𝕊</mi><mi>n</mi></msup></mrow></mrow><annotation encoding="application/x-tex">f,g:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}</annotation></semantics></math> are continuous maps.</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\deg(f\circ g)=\deg f\deg g" display="inline"><semantics><mrow><mrow><mi>deg</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo lspace="0.222em" rspace="0.222em">∘</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mrow><mi>f</mi><mo lspace="0.167em">⁢</mo><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>g</mi></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\deg(f\circ g)=\deg f\deg g</annotation></semantics></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="f\simeq g" display="inline"><semantics><mrow><mi>f</mi><mo>≃</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">f\simeq g</annotation></semantics></math><span class="ltx_text ltx_font_italic">, then </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="\deg f=\deg g" display="inline"><semantics><mrow><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>f</mi></mrow><mo>=</mo><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>g</mi></mrow></mrow><annotation encoding="application/x-tex">\deg f=\deg g</annotation></semantics></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Part 1 follows from the fact that taking homologies is a functor, and part 2 from the homotopy invariance of singular homology.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 7.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="\varphi:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}" display="inline"><semantics><mrow><mi>φ</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>𝕊</mi><mi>n</mi></msup><mo stretchy="false">→</mo><msup><mi>𝕊</mi><mi>n</mi></msup></mrow></mrow><annotation encoding="application/x-tex">\varphi:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}</annotation></semantics></math> be continupus. <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="\deg\varphi\neq 0" display="inline"><semantics><mrow><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>φ</mi></mrow><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\deg\varphi\neq 0</annotation></semantics></math> implies that <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="\varphi" display="inline"><semantics><mi>φ</mi><annotation encoding="application/x-tex">\varphi</annotation></semantics></math> is surjective. If <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="\deg\varphi\neq(-1)^{n+1}," display="inline"><semantics><mrow><mrow><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>φ</mi></mrow><mo>≠</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\deg\varphi\neq(-1)^{n+1},</annotation></semantics></math> then <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="\varphi" display="inline"><semantics><mi>φ</mi><annotation encoding="application/x-tex">\varphi</annotation></semantics></math> has a fixed point.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Indeed, for the first statement, if the image of <math id="p3.m1" class="ltx_Math" alttext="\varphi" display="inline"><semantics><mi>φ</mi><annotation encoding="application/x-tex">\varphi</annotation></semantics></math> was not all of <math id="p3.m2" class="ltx_Math" alttext="\mathbb{S}^{n}" display="inline"><semantics><msup><mi>𝕊</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{S}^{n}</annotation></semantics></math>, then the map <math id="p3.m3" class="ltx_Math" alttext="\varphi" display="inline"><semantics><mi>φ</mi><annotation encoding="application/x-tex">\varphi</annotation></semantics></math> would be homotopic to a constant map. This is because if the image misses a point <math id="p3.m4" class="ltx_Math" alttext="p" display="inline"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>, then <math id="p3.m5" class="ltx_Math" alttext="\mathbb{S}^{n}\backslash\{p\}" display="inline"><semantics><mrow><msup><mi>𝕊</mi><mi>n</mi></msup><mo lspace="0.222em" rspace="0.222em">\</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbb{S}^{n}\backslash\{p\}</annotation></semantics></math> is contractible. Thus the map <math id="p3.m6" class="ltx_Math" alttext="\varphi" display="inline"><semantics><mi>φ</mi><annotation encoding="application/x-tex">\varphi</annotation></semantics></math> induces a trivial homomorphism which has degreee <math id="p3.m7" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.
+<br class="ltx_break">Now suppose that <math id="p3.m8" class="ltx_Math" alttext="f" display="inline"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> does not have any fixed points. Let <math id="p3.m9" class="ltx_Math" alttext="a:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}" display="inline"><semantics><mrow><mi>a</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>𝕊</mi><mi>n</mi></msup><mo stretchy="false">→</mo><msup><mi>𝕊</mi><mi>n</mi></msup></mrow></mrow><annotation encoding="application/x-tex">a:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}</annotation></semantics></math> denote the antipodal map. Then <math id="p3.m10" class="ltx_Math" alttext="a\circ f\simeq id" display="inline"><semantics><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">∘</mo><mi>f</mi></mrow><mo>≃</mo><mrow><mi>i</mi><mo>⁢</mo><mi>d</mi></mrow></mrow><annotation encoding="application/x-tex">a\circ f\simeq id</annotation></semantics></math>. This is because the image of any point will not be <math id="p3.m11" class="ltx_Math" alttext="-x" display="inline"><semantics><mrow><mo>−</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">-x</annotation></semantics></math>, so the image <math id="p3.m12" class="ltx_Math" alttext="a(f(x))" display="inline"><semantics><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">a(f(x))</annotation></semantics></math> can be traced back to <math id="p3.m13" class="ltx_Math" alttext="x" display="inline"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> via a homotopy on a great circle. This, <math id="p3.m14" class="ltx_Math" alttext="\deg a\deg f=\deg id\implies\deg f=(-1)^{n+1}" display="inline"><semantics><mrow><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mrow><mi>a</mi><mo lspace="0.167em">⁢</mo><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>f</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mrow><mi>i</mi><mo>⁢</mo><mi>d</mi></mrow></mrow><mo stretchy="false">⟹</mo><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>f</mi></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\deg a\deg f=\deg id\implies\deg f=(-1)^{n+1}</annotation></semantics></math>
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 7.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The antipodal map <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="\alpha:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}" display="inline"><semantics><mrow><mi>α</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>𝕊</mi><mi>n</mi></msup><mo stretchy="false">→</mo><msup><mi>𝕊</mi><mi>n</mi></msup></mrow></mrow><annotation encoding="application/x-tex">\alpha:\mathbb{S}^{n}\rightarrow\mathbb{S}^{n}</annotation></semantics></math> is homotopic to the identity iff <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> is odd.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">If <math id="p4.m1" class="ltx_Math" alttext="n=2k-1" display="inline"><semantics><mrow><mi>n</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>1</mn></mrow></mrow><annotation encoding="application/x-tex">n=2k-1</annotation></semantics></math> is odd, then an explicit homotopy is given by</p>
+<table id="Ch2.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex37.m1" class="ltx_Math" alttext="H(x,t)=(\cos\pi t\cdot x_{1}+\sin\pi t\cdot x_{2},\cos\pi t\cdot x_{2}-\sin\pi
+t%
+\cdot x_{1},\cdots,\cos\pi t\cdot x_{2k}-\sin\pi t\cdot x_{2k-1})" display="block"><semantics><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow></mrow><mo>,</mo><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>−</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow></mrow><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow></msub></mrow></mrow><mo>−</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>x</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">H(x,t)=(\cos\pi t\cdot x_{1}+\sin\pi t\cdot x_{2},\cos\pi t\cdot x_{2}-\sin\pi
+t%
+\cdot x_{1},\cdots,\cos\pi t\cdot x_{2k}-\sin\pi t\cdot x_{2k-1})</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If <math id="p4.m2" class="ltx_Math" alttext="n=0" display="inline"><semantics><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n=0</annotation></semantics></math>, then <math id="p4.m3" class="ltx_Math" alttext="alpha" display="inline"><semantics><mrow><mi>a</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">alpha</annotation></semantics></math> is clearly not homotopic to the identity. If <math id="p4.m4" class="ltx_Math" alttext="n&gt;0" display="inline"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n&gt;0</annotation></semantics></math> is even, then <math id="p4.m5" class="ltx_Math" alttext="\deg\alpha=-1" display="inline"><semantics><mrow><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mi>α</mi></mrow><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow><annotation encoding="application/x-tex">\deg\alpha=-1</annotation></semantics></math>, but <math id="p4.m6" class="ltx_Math" alttext="\deg id=1" display="inline"><semantics><mrow><mrow><mi>deg</mi><mo lspace="0.167em">⁡</mo><mrow><mi>i</mi><mo>⁢</mo><mi>d</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\deg id=1</annotation></semantics></math> thus proving the theorem.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 7.4</span></span><span class="ltx_text ltx_font_bold"> </span>(Hairy Ball)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There exists a nowhere vanishing vector field on <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="\mathbb{S}^{n}" display="inline"><semantics><msup><mi>𝕊</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{S}^{n}</annotation></semantics></math> iff <math id="Thmtheorem4.p1.m2" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> is odd.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Suppose that there exists such a vector field. Then we can use <math id="p5.m1" class="ltx_Math" alttext="V/|V|" display="inline"><semantics><mrow><mi>V</mi><mo>/</mo><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow></mrow><annotation encoding="application/x-tex">V/|V|</annotation></semantics></math> to construct a homotopy between the antipodal map <math id="p5.m2" class="ltx_Math" alttext="\alpha" display="inline"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> and <math id="p5.m3" class="ltx_Math" alttext="id" display="inline"><semantics><mrow><mi>i</mi><mo>⁢</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">id</annotation></semantics></math> as follows.</p>
+<table id="Ch2.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex38.m1" class="ltx_Math" alttext="H(x,t)=(\cos\pi t)x+(\sin\pi t)V(x)/|V(x)|." display="block"><semantics><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>π</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">|</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">H(x,t)=(\cos\pi t)x+(\sin\pi t)V(x)/|V(x)|.</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Since <math id="p5.m4" class="ltx_Math" alttext="V(x)\cdot x=0" display="inline"><semantics><mrow><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="0.055em" stretchy="false">)</mo></mrow></mrow><mo rspace="0.222em">⋅</mo><mi>x</mi></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">V(x)\cdot x=0</annotation></semantics></math> by definition of a vector field and <math id="p5.m5" class="ltx_Math" alttext="|x|^{2}=|V(x)|^{2}=1" display="inline"><semantics><mrow><msup><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|x|^{2}=|V(x)|^{2}=1</annotation></semantics></math>, we get that the above map is the desired homotopy. Therefore <math id="p5.m6" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> must be odd.
+∎</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch2.S6.html" title="In Chapter 2 Singular Homology ‣ Algebraic Topology" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Homology Groups of Spheres</span></a><a href="bib.html" title="In Algebraic Topology" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">Bibliography</span></a><a href="bib.html" title="In Algebraic Topology" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">Bibliography</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Apr 21 02:38:24 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
